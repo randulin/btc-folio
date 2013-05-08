@@ -166,29 +166,25 @@ function BTC($scope, $http) {
 			alert('Error parsing Json');
 			return;
 		}
-		
-		s.Addresses = $scope.save.addresses;
-		s.BtcTcApiKey = $scope.invest.BtcTcApiKey;
-		
+
 		if (data.BTC) {
-      if (!$scope.spend) $scope.spend = {};
       $scope.spend.value = parseFloat(data.BTC);
 			localStorage.setItem('btc-portfolio.spend.value', $scope.spend.value);
 		}
 		
 		if (data.Addresses) {
-      if (!$scope.save) $scope.save = {};
 			$scope.save.addresses = data.Addresses;
 			localStorage.setItem('btc-portfolio.save.addresses', JSON.stringify($scope.save.addresses));
 			updateBlockchain($scope);
 		}
 		
 		if (data.BtcTcApiKey) {
-      if (!$scope.invest) $scope.invest = {};
       $scope.invest.BtcTcApiKey = data.BtcTcApiKey;
 			localStorage.setItem('btc-portfolio.invest.BtcTcApiKey', $scope.invest.BtcTcApiKey);
 			getBtcTcPortfolio($scope);
 		}
+
+    $scope.toggleSettings();
 	};
 
 }
