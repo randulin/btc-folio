@@ -1,0 +1,37 @@
+section
+    h2 Save
+    .settings(ng-show='settings.show')
+        form(ng-submit='addAddress()')
+            input(type='text', ng-model='save.BitCoinAddress', placeholder='Add address to watch')
+            input.btn-primary(type='submit', value='add')
+
+    div(ng-show='settings.show')
+        table(ng-show='save.blockadr')
+            tr(ng-repeat='address in save.blockadr')
+                td.action
+                    a(href='', title='remove this address from the list', ng-click='removeAddress(address.address)') [remove]
+                td
+                    span
+                        a(target='_blank', title='view on blockchain.info', href='https://blockchain.info/address/{{address.address}}', ng-show='address.address')
+                            | {{address.address}}
+
+
+
+    div(ng-hide='settings.show')
+        table(ng-show='save.blockadr')
+            tr
+                th Address
+                th.right BTC
+                th.right USD
+            tr(ng-repeat='address in save.blockadr')
+                td
+                    a(target='_blank', title='view on blockchain.info ({{address.address}})', href='https://blockchain.info/address/{{address.address}}', ng-show='address.address')
+                        | {{address.address}}
+                td.right {{(address.final_balance/100000000)| currency:""}}
+                td.right
+                    | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(address.final_balance/100000000)| currency:""}}
+            tr
+                td.right.bold Total
+                td.right.bold {{(save.wallet.final_balance/100000000)| currency:""}}
+                td.right.bold
+                    | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(save.wallet.final_balance/100000000)| currency:""}}

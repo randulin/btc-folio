@@ -46,105 +46,12 @@ html(ng-app)
         .main-container
             .main.wrapper.clearfix
                 article
-                    section
-                        h2 Market
-                        div(ng-show='market.bitcoindata')
-                            table
-                                tr
-                                    th BTC
-                                    th.right(title='latest bid') USD
-                                    th.right(title='quantity hold') 24h
-                                    th.right(title='total btc') 7d
-                                    th.right(title='total usd') 30d
-                                tr
-                                    td 1 =
-                                    td.right
-                                        a(target='_blank', href='http://bitcoincharts.com/markets/mtgoxUSD.html')
-                                            | {{market.bitcoindata.info.symbol_local.symbol}}{{market.bitcoindata.info.symbol_local.conversion_back|
-                                            | currency:""}}
-                                    td.right(ng-class='ng-class', 24h='24h')
-                                    td.right(ng-class='ng-class', 7d='7d')
-                                    td.right(ng-class='ng-class', 30d='30d')
-                    section
-                        h2 Spend
-                        .settings(ng-show='settings.show')
-                            form(ng-submit='addSpendValue()')
-                                input(type='text', ng-model='spend.ValueAdd', placeholder='Add btc (+/-)')
-                                input.btn-primary(type='submit', value='add')
-                        div
-                            div(ng-show='spend.value')
-                                | {{spend.value| currency:"BTC "}} =
-                                | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(spend.value)| currency:""}}
-                    section
-                        h2 Invest
-                        .settings(ng-show='settings.show')
-                            form(ng-submit='addBtcTcApiKey()')
-                                input(type='text', ng-model='invest.BtcTcApiKey', placeholder='Add btct.co API key')
-                                input.btn-primary(type='submit', value='save')
-                        div
-                            table(ng-show='invest.BtcTcApiKey')
-                                tr
-                                    th Ticker
-                                    th.right(title='latest bid') Bid
-                                    th.right(title='quantity hold') Qty
-                                    th.right(title='total btc') BTC
-                                    th.right(title='total usd') USD
-                                    th.right(title='total usd') 24h
-                                    th.right(title='total usd') 7d
-                                    th.right(title='total usd') 30d
-                                tr(ng-repeat='security in invest.btctc.securities', ng-show='security.market.bid')
-                                    td
-                                        a(target='_blank', title='view on btct.co', href='https://btct.co/security/{{security.market.ticker}}', ng-show='security.market.ticker') {{security.market.ticker}}
-                                    td.right {{security.market.bid| currency:""}}
-                                    td.right {{security.quantity}}
-                                    td.right {{security.total_value| currency:""}}
-                                    td.right
-                                        | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(security.total_value)| currency:""}}
-                                    td.right(ng-class='ng-class', 24h_avg='24h_avg')
-                                    td.right(ng-class='ng-class', 7d_avg='7d_avg')
-                                    td.right(ng-class='ng-class', 30d_avg='30d_avg')
-                                tr
-                                    td.(colspan='3') Balance
-                                    td.right {{invest.btctc.balance.BTC| currency:""}}
-                                    td.right
-                                        | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(invest.btctc.balance.BTC)| currency:""}}
-                                    td(colspan='3')
-                                tr
-                                    td.right.bold(colspan='3') Total
-                                    td.right.bold {{invest.totalbtc| currency: ""}}
-                                    td.right.bold
-                                        | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(invest.totalbtc)| currency: ""}}
-                                    td(colspan='3')
-                    section
-                        h2 Save
-                        .settings(ng-show='settings.show')
-                            form(ng-submit='addAddress()')
-                                input(type='text', ng-model='save.BitCoinAddress', placeholder='Add address to watch')
-                                input.btn-primary(type='submit', value='add')
-                        div
-                            table(ng-show='save.blockadr')
-                                tr
-                                    th Address
-                                    th.right BTC
-                                    th.right USD
-                                    th
-                                tr(ng-repeat='address in save.blockadr')
-                                    td
-                                        span(style='width: 100px; overflow: hidden; display: inline-block;')
-                                            a(target='_blank', title='view on blockchain.info', href='https://blockchain.info/address/{{address.address}}', ng-show='address.address')
-                                                | {{address.address}}
-                                        | …
-                                    td.right {{(address.final_balance/100000000)| currency:""}}
-                                    td.right
-                                        | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(address.final_balance/100000000)| currency:""}}
-                                    td.right.action
-                                        a(href='', title='remove this address from the list', ng-click='removeAddress(address.address)') [remove]
-                                tr
-                                    td.right.bold Total
-                                    td.right.bold {{(save.wallet.final_balance/100000000)| currency:""}}
-                                    td.right.bold
-                                        | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(save.wallet.final_balance/100000000)| currency:""}}
-                                    td
+
+                    include includes/market.jade
+                    include includes/spend.jade
+                    include includes/invest.jade
+                    include includes/save.jade
+
                     section.settings(ng-show='settings.show')
                         h2 Export/Import Settings
                         .settings(ng-show='settings.show')

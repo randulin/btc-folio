@@ -1,0 +1,10 @@
+section
+    h2 Spend
+    .settings(ng-show='settings.show')
+        form(ng-submit='addSpendValue()')
+            input(type='text', ng-model='spend.ValueAdd', placeholder='Add btc (+/-)')
+            input.btn-primary(type='submit', value='add')
+    div
+        div(ng-show='spend.value')
+            | {{spend.value| currency:"BTC "}} =
+            | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(spend.value)| currency:""}}
