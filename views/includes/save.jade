@@ -1,5 +1,6 @@
 section
     h2 Save
+    span.help(ng-show='settings.show',ng-mouseover='settings.helptopic.save=true',ng-mouseout='settings.helptopic.save=false') ?
     .settings(ng-show='settings.show')
         form(ng-submit='addAddress()')
             input(type='text', ng-model='save.BitCoinAddress', placeholder='Add address to watch')
@@ -20,9 +21,9 @@ section
     div(ng-hide='settings.show')
         table(ng-show='save.blockadr')
             tr
-                th Address
-                th.right BTC
-                th.right USD
+                th(width="60%") Address
+                th.right(width="90px") BTC
+                th.right(width="90px") USD
             tr(ng-repeat='address in save.blockadr')
                 td
                     a(target='_blank', title='view on blockchain.info ({{address.address}})', href='https://blockchain.info/address/{{address.address}}', ng-show='address.address')

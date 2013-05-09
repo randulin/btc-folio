@@ -122,13 +122,18 @@ nav a:hover {
    
 body {
     font: 16px/26px 'Merriweather Sans', sans-serif;
-    background-image: url(/img/bg.png); 
-	background-position: top left;
-	background-repeat: repeat-x;
-	background-color: #FFFCEF; 
-    color: #2A353C; 
-}
+    color: #2A353C;
 
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 25%, rgba(0,0,0,0.1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.1)), color-stop(25%,rgba(255,255,255,0.1)), color-stop(100%,rgba(0,0,0,0.1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.1) 25%,rgba(0,0,0,0.1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.1) 25%,rgba(0,0,0,0.1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.1) 25%,rgba(0,0,0,0.1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.1) 25%,rgba(0,0,0,0.1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1affffff', endColorstr='#1a000000',GradientType=0 ); /* IE6-9 */
+
+    background-color: #FFFCEF;
+}
 
 h1, h2, h3, h4 {	
     font-family: 'Donegal One', serif; 
@@ -139,6 +144,16 @@ h2 {
 	margin: 0;
 	padding: 5px 10px;    
     font-weight: bold;
+
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 20%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.1)), color-stop(20%,rgba(255,255,255,0.1)), color-stop(60%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.1) 20%,rgba(255,255,255,0) 60%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.1) 20%,rgba(255,255,255,0) 60%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.1) 20%,rgba(255,255,255,0) 60%,rgba(255,255,255,0) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.1) 20%,rgba(255,255,255,0) 60%,rgba(255,255,255,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1affffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+
+
 	background-color: #0097A3;
 	color: #FFFFFF;
 }
@@ -149,6 +164,7 @@ section {
 	margin-bottom: 20px;
 	overflow: hidden;
     border-radius: 5px;
+    background-color: #FFFCEF;
 }
 
 section > div {
@@ -194,6 +210,7 @@ header svg {
 	border: 1px solid #0097A3;
 	min-width: 220px;
     border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 .main aside div {
@@ -210,7 +227,21 @@ header svg {
 	color: #7F0000;	
 }
 
+.help {
+    font-family: 'Donegal One', serif;
+    float: right;
+    color: white;
+    margin-top: -37px;
+    margin-right: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
 
+
+
+table { width:100%;table-layout:fixed; }
+table tr { height:1em;  }
+td { overflow:hidden;white-space:nowrap;  }
 
 
 /* ====================
@@ -332,6 +363,10 @@ section table {
 
 
 
+.hidesm {
+    display: none;
+}
+
 
 
 
@@ -389,6 +424,11 @@ section table {
     .main aside {
         float: right;
         width: 28%;
+    }
+
+
+    .hidesm {
+        display: table-cell;
     }
 }
 

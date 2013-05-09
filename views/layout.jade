@@ -45,6 +45,19 @@ html(ng-app)
 
         .main-container
             .main.wrapper.clearfix
+                aside
+                    h2 Summary
+                    div
+                        table
+                            tr
+                                th.right BTC
+                                th.right USD
+                            tr
+                                td.right {{getTotal()| currency:""}}
+                                td.right
+                                    | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(getTotal())| currency: ""}}
+
+
                 article
 
                     include includes/market.jade
@@ -54,24 +67,48 @@ html(ng-app)
 
                     section.settings(ng-show='settings.show')
                         h2 Export/Import Settings
+                        span.help(ng-show='settings.show',ng-mouseover='settings.helptopic.export=true',ng-mouseout='settings.helptopic.export=false') ?
                         .settings(ng-show='settings.show')
                             form(ng-submit='importSettings()')
                                 textarea(rows='10', style='width: 100%; font-size: 0.8em;', ng-model='jsonimport') {{getSettings()}}
                                 br
-                                input.btn-primary(type='submit', value='Import Settings')
-                aside
-                    h2 Summary
-                    div
-                        table
-                            tr
-                                th BTC
-                                th.right USD
-                            tr
-                                td.right {{getTotal()| currency:""}} =
-                                td.right
-                                    | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(getTotal())| currency: ""}}
+                                div(style="text-align: right")
+                                    input.btn-primary(type='submit', value='Import Settings')
 
-        .footer-container
+                aside(ng-show='settings.show')
+                    h2 Help
+
+                    div.topic(ng-show='settings.helptopic.market')
+                        | The current market data from
+                        a(href="http://blockchain.info/")  blockchain.info
+                        |  and weighted prices from
+                        a(href="http://bitcoincharts.com")  bitcoincharts.com
+                        |  is displayed here.
+
+                    div.topic(ng-show='settings.helptopic.spend')
+                        | You can add or subtract arbitrary amount of BTCs and their value in USD here.
+
+                    div.topic(ng-show='settings.helptopic.invest')
+                        | With the API-key from
+                        a(href="https://btct.co/")  btct.co
+                        |  you can watch your assets and BTC ballance.
+                        | You'll get the API key from the account settings page.
+
+                    div.topic(ng-show='settings.helptopic.save')
+                        | You can add here one or more bitcoin addresses to watch their value here. The BTC value of the addresses is
+                        | pulled from
+                        a(href="http://blockchain.info/")  blockchain.info
+                        | .
+
+                    div.topic(ng-show='settings.helptopic.export')
+                        | Use this to export or inport all settings to an other device.
+                        | .
+
+                    div
+                        | Use this site to get a snapshot of various aspects of your Bitcoin wealth. All data ist stored in
+                        | the local browser storage for now.
+
+    .footer-container
             footer.wrapper
                 p donate: 1338aqevnKRj8KF5T4gRv4x3LeAfPGZ3fL
 
@@ -80,5 +117,5 @@ html(ng-app)
 
 
 
-        script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js')
-        script(src='/js/main.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js')
+    script(src='/js/main.js')

@@ -1,22 +1,29 @@
 section
     h2 Market
+    span.help(ng-show='settings.show',ng-mouseover='settings.helptopic.market=true',ng-mouseout='settings.helptopic.market=false') ?
     div(ng-show='market.bitcoindata')
         table
             tr
-                th BTC
+                th.right BTC
                 th.right(title='latest bid') USD
                 th.right(title='quantity hold') 24h
                 th.right(title='total btc') 7d
                 th.right(title='total usd') 30d
             tr
-                td 1 =
+                td.right {{1| currency:""}}
                 td.right
                     a(target='_blank', href='http://bitcoincharts.com/markets/mtgoxUSD.html')
                         | {{market.bitcoindata.info.symbol_local.symbol}}{{market.bitcoindata.info.symbol_local.conversion_back|
                         | currency:""}}
-                td.right(ng-class="{negative: getMarketChange('24h') < 0, positive: getMarketChange('24h') > 0}", 24h='24h')
+                td.right(ng-class="{negative: getMarketChange('24h') < 0, positive: getMarketChange('24h') > 0}", 24h='24h',rowspan="2")
                     {{getMarketChange('24h') | number:1}}%
-                td.right(ng-class="{negative: getMarketChange('7d') < 0, positive: getMarketChange('7d') > 0}", 7d='7d')
+                td.right(ng-class="{negative: getMarketChange('7d') < 0, positive: getMarketChange('7d') > 0}", 7d='7d',rowspan="2")
                     {{getMarketChange('7d') | number:1}}%
-                td.right(ng-class="{negative: getMarketChange('30d') < 0, positive: getMarketChange('30d') > 0}", 30d='30d')
+                td.right(ng-class="{negative: getMarketChange('30d') < 0, positive: getMarketChange('30d') > 0}", 30d='30d',rowspan="2")
                     {{getMarketChange('30d') | number:1}}%
+            tr
+                td.right {{market.bitcoindata.info.symbol_local.conversion / 100000| currency:""}}m
+                td.right
+                    a(target='_blank', href='http://bitcoincharts.com/markets/mtgoxUSD.html')
+                        | {{market.bitcoindata.info.symbol_local.symbol}}{{1| currency:""}}
+            tr
