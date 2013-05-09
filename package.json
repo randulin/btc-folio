@@ -6,8 +6,8 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "3.2.3",
-    "jade": "*"
+    "express": "3.2.3"
+    , "jade": "*"
   },
   "engines": {
     "node": "0.10.x",

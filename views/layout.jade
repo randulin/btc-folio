@@ -107,9 +107,15 @@ html(ng-app)
                     div
                         | Use this site to get a snapshot of various aspects of your Bitcoin wealth. All data ist stored in
                         | the local browser storage for now.
+                        br
+                        br
+                        | The code can be found&nbsp;
+                        a(href="https://github.com/randulin/btc-folio") here
+                        | .
 
     .footer-container
             footer.wrapper
+                p(ng-show='settings.show') {{lastRefresh}}
                 p donate: 1338aqevnKRj8KF5T4gRv4x3LeAfPGZ3fL
 
 

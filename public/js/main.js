@@ -1,7 +1,7 @@
 'use strict';
 
 
-function BTC($scope, $http) {
+function BTC($scope, $http, $timeout) {
 	var addresses_raw, spendvalue;
 	
 	//init		
@@ -57,6 +57,7 @@ function BTC($scope, $http) {
 			$scope.market.bitcoindata.info.symbol_local.conversion_back = 1 / $scope.market.bitcoindata.info.symbol_local.conversion * 100000000;
 			$scope.save.blockadr = data.addresses;
 			$scope.save.wallet = data.wallet;
+      $scope.lastRefresh = new Date();
 		});
 	};
 	updateBlockchain($scope);
@@ -65,6 +66,7 @@ function BTC($scope, $http) {
 	var updateWeighted = function($scope) {
 		$http.get('./bitcoincharts_weighted').success(function(data) {
 			$scope.market.ticker = data;
+      $scope.lastRefresh = new Date();
 		});
 	};
 	updateWeighted($scope);
@@ -87,7 +89,9 @@ function BTC($scope, $http) {
 						d.market = data;
 						d.market.bid = parseFloat(d.market.bid);
 						d.total_value = d.market.bid * d.quantity;
-						$scope.invest.totalbtc += d.total_value;							
+						$scope.invest.totalbtc += d.total_value;
+
+            $scope.lastRefresh = new Date();
 					});
 				}
 			});
@@ -139,7 +143,7 @@ function BTC($scope, $http) {
 	$scope.refresh = function() {
 		updateBlockchain($scope);
 		getBtcTcPortfolio($scope);	
-		updateWeighted($scope);	
+		updateWeighted($scope);
 	};
 	
 	$scope.toggleSettings = function() {
@@ -187,4 +191,10 @@ function BTC($scope, $http) {
     $scope.toggleSettings();
 	};
 
+  var countUp = function() {
+    $scope.refresh();
+    $timeout(countUp, 1000 * 60 * 5);
+  }
+
+  $timeout(countUp, 1000 * 60 * 5);
 }
