@@ -175,6 +175,7 @@ section > div {
 
 .header-container {
 	background: #C45000;
+	clear: both; 
 }
 
 header {	
