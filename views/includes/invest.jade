@@ -6,42 +6,46 @@ section
             input(type='text', ng-model='invest.BtcTcApiKey', placeholder='Add btct.co API key')
             input.btn-primary(type='submit', value='save')
     div
-        table(ng-show='invest.BtcTcApiKey')
-            tr
-                th(width="20%") Ticker
-                th.right(title='latest bid',width="50px") Bid
-                th.right(title='quantity hold',width="50px") Qty
-                th.right(title='total btc',width="70px") BTC
-                th.right(title='total usd',width="90px") USD
-                th.right.hidesm(title='total usd',width="50px") 24h
-                th.right.hidesm(title='total usd',width="50px") 7d
-                th.right.hidesm(title='total usd',width="50px") 30d
-            tr(ng-repeat='security in invest.btctc.securities', ng-show='security.market.bid')
-                td
-                    a(target='_blank', title='view on btct.co', href='https://btct.co/security/{{security.market.ticker}}', ng-show='security.market.ticker') {{security.market.ticker}}
-                td.right {{security.market.bid| currency:""}}
-                td.right {{security.quantity}}
-                td.right {{security.total_value| currency:""}}
-                td.right
-                    | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(security.total_value)| currency:""}}
+        table#rt1.rt.cf(ng-show='invest.BtcTcApiKey')
+            thead.cf
+                tr
+                    th Ticker
+                    th.right(title='latest bid') Bid
+                    th.right(title='quantity hold') Qty
+                    th.right(title='total btc') BTC
+                    th.right(title='total usd') USD
+                    th.right(title='change to 24h average') 24h
+                    th.right(title='change to 7d average') 7d
+                    th.right(title='change to 30d average') 30d
 
-                td.right.hidesm(ng-class="{negative: getTickerChange(security, '24h_avg') < 0, positive: getTickerChange(security, '24h_avg') > 0}")
-                    {{getTickerChange(security, '24h_avg') | number:1}}%
-                td.right.hidesm(ng-class="{negative: getTickerChange(security, '7d_avg') < 0, positive: getTickerChange(security, '7d_avg') > 0}")
-                    {{getTickerChange(security, '7d_avg') | number:1}}%
-                td.right.hidesm(ng-class="{negative: getTickerChange(security, '30d_avg') < 0, positive: getTickerChange(security, '30d_avg') > 0}")
-                    {{getTickerChange(security, '30d_avg') | number:1}}%
+            tbody.transform
+                tr.data(ng-repeat='security in invest.btctc.securities', ng-show='security.market.bid')
+                    td.ticker
+                        a(target='_blank', title='view on btct.co', href='https://btct.co/security/{{security.market.ticker}}', ng-show='security.market.ticker') {{security.market.ticker}}
+
+                    td.right {{security.market.bid| currency:""}}
+                    td.right {{security.quantity}}
+                    td.right {{security.total_value| currency:""}}
+                    td.right
+                        | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(security.total_value)| currency:""}}
+                    td.right(ng-class="{negative: getTickerChange(security, '24h_avg') < 0, positive: getTickerChange(security, '24h_avg') > 0}")
+                        {{getTickerChange(security, '24h_avg') | number:1}}%
+                    td.right(ng-class="{negative: getTickerChange(security, '7d_avg') < 0, positive: getTickerChange(security, '7d_avg') > 0}")
+                        {{getTickerChange(security, '7d_avg') | number:1}}%
+                    td.right(ng-class="{negative: getTickerChange(security, '30d_avg') < 0, positive: getTickerChange(security, '30d_avg') > 0}")
+                        {{getTickerChange(security, '30d_avg') | number:1}}%
 
 
-            tr
-                td.right(colspan='3') Balance
-                td.right {{invest.btctc.balance.BTC| currency:""}}
-                td.right
-                    | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(invest.btctc.balance.BTC)| currency:""}}
-                td.hidesm(colspan='3')
-            tr
-                td.right.bold(colspan='3') Total
-                td.right.bold {{invest.totalbtc| currency: ""}}
-                td.right.bold
-                    | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(invest.totalbtc)| currency: ""}}
-                td.hidesm(colspan='3')
+            tbody.sum
+                tr.noborder
+                    td.right(colspan='3') Balance
+                    td.right {{invest.btctc.balance.BTC| currency:""}}
+                    td.right
+                        | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(invest.btctc.balance.BTC)| currency:""}}
+                    td(colspan='3')
+                tr.noborder
+                    td.right.bold(colspan='3') Total
+                    td.right.bold {{invest.totalbtc| currency: ""}}
+                    td.right.bold
+                        | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(invest.totalbtc)| currency: ""}}
+                    td(colspan='3')

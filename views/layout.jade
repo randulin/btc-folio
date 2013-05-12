@@ -52,7 +52,7 @@ html(ng-app)
                             tr
                                 th.right BTC
                                 th.right USD
-                            tr
+                            tr.noborder
                                 td.right {{getTotal()| currency:""}}
                                 td.right
                                     | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(getTotal())| currency: ""}}

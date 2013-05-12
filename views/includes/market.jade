@@ -5,11 +5,11 @@ section
         table
             tr
                 th.right BTC
-                th.right(title='latest bid') USD
-                th.right(title='quantity hold') 24h
-                th.right(title='total btc') 7d
-                th.right(title='total usd') 30d
-            tr
+                th.right USD
+                th.right(title='change to 24h average') 24h
+                th.right(title='change to 7d average') 7d
+                th.right(title='change to 30d average') 30d
+            tr.noborder
                 td.right {{1| currency:""}}
                 td.right
                     a(target='_blank', href='http://bitcoincharts.com/markets/mtgoxUSD.html')
@@ -21,9 +21,8 @@ section
                     {{getMarketChange('7d') | number:1}}%
                 td.right(ng-class="{negative: getMarketChange('30d') < 0, positive: getMarketChange('30d') > 0}", 30d='30d',rowspan="2")
                     {{getMarketChange('30d') | number:1}}%
-            tr
+            tr.noborder
                 td.right {{market.bitcoindata.info.symbol_local.conversion / 100000| currency:""}}m
                 td.right
                     a(target='_blank', href='http://bitcoincharts.com/markets/mtgoxUSD.html')
                         | {{market.bitcoindata.info.symbol_local.symbol}}{{1| currency:""}}
-            tr

@@ -19,19 +19,19 @@ section
 
 
     div(ng-hide='settings.show')
-        table(ng-show='save.blockadr')
+        table.fixed(ng-show='save.blockadr')
             tr
                 th(width="60%") Address
                 th.right(width="90px") BTC
                 th.right(width="90px") USD
             tr(ng-repeat='address in save.blockadr')
-                td
+                td.address
                     a(target='_blank', title='view on blockchain.info ({{address.address}})', href='https://blockchain.info/address/{{address.address}}', ng-show='address.address')
                         | {{address.address}}
                 td.right {{(address.final_balance/100000000)| currency:""}}
                 td.right
                     | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(address.final_balance/100000000)| currency:""}}
-            tr
+            tr.noborder
                 td.right.bold Total
                 td.right.bold {{(save.wallet.final_balance/100000000)| currency:""}}
                 td.right.bold
