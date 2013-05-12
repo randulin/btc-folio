@@ -1,7 +1,7 @@
 'use strict';
 
 
-function BTC($scope, $http, $timeout) {
+var BTC = function ($scope, $http, $timeout) {
 	var addresses_raw, spendvalue;
 	
 	//init		
@@ -198,3 +198,5 @@ function BTC($scope, $http, $timeout) {
 
   $timeout(countUp, 1000 * 60 * 5);
 }
+
+BTC.$inject = ['$scope', '$http', '$timeout'];
