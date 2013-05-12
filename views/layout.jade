@@ -15,8 +15,8 @@ html(ng-app)
         link(href='http://fonts.googleapis.com/css?family=Merriweather+Sans:300,700', rel='stylesheet', type='text/css')
         link(href='http://fonts.googleapis.com/css?family=Donegal+One', rel='stylesheet', type='text/css')
 
-        link(rel='stylesheet', href='css/app-0.0.7.css')
-        script(src='/js/app-0.0.7.js')
+        link(rel='stylesheet', href='css/app-0.0.8.css')
+        script(src='/js/app-0.0.8.js')
 
 
     body(ng-controller='BTC')
@@ -62,9 +62,9 @@ html(ng-app)
                 article
 
                     include includes/market.jade
-                    include includes/spend.jade
                     include includes/invest.jade
                     include includes/save.jade
+                    include includes/spend.jade
 
                     section.settings(ng-show='settings.show')
                         h2 Export/Import Settings
