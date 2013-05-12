@@ -153,6 +153,7 @@ var BTC = function ($scope, $http, $timeout) {
 	
 	$scope.getMarketChange = function(key) {
 		if (!$scope.market.bitcoindata) return null;
+    if (!$scope.market.ticker) return null;
 		return (($scope.market.bitcoindata.info.symbol_local.conversion_back - $scope.market.ticker.USD[key])/$scope.market.ticker.USD[key] * 100);	
 	};
 
