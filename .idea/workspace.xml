@@ -1,17 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73bd5805-3332-4c68-adf1-ea4007c5032d" name="Default" comment="fave">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/filters/numbere.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="$PROJECT_DIR$/public/js/app.js" />
+    <list default="true" id="73bd5805-3332-4c68-adf1-ea4007c5032d" name="Default" comment="- fixed crash on ios with animated svg -&gt; icon font&#10;- added launch screen for ios">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/font/FontAwesome.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/apple-touch-startup-image-1536x2008.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/apple-touch-startup-image-2048x1496.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/apple-touch-startup-image-320x460.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/apple-touch-startup-image-640x1096.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/apple-touch-startup-image-640x920.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/apple-touch-startup-image-748x1024.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/apple-touch-startup-image-768x1004.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/font/fontawesome-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/font/fontawesome-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/font/fontawesome-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/font-awesome.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/font-awesome.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/font/fontawesome-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/spinner.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/spinner_startup.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/includes/spinner.jade" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/app.css" afterPath="$PROJECT_DIR$/public/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gruntfile.js" afterPath="$PROJECT_DIR$/gruntfile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/includes/invest.jade" afterPath="$PROJECT_DIR$/views/includes/invest.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.jade" afterPath="$PROJECT_DIR$/views/layout.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/main.js" afterPath="$PROJECT_DIR$/public/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/main.css" afterPath="$PROJECT_DIR$/public/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/includes/market.jade" afterPath="$PROJECT_DIR$/views/includes/market.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/includes/save.jade" afterPath="$PROJECT_DIR$/views/includes/save.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/includes/spend.jade" afterPath="$PROJECT_DIR$/views/includes/spend.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="btc-folio.iws" />
@@ -20,13 +38,13 @@
     <file path="/a.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368729364829" ignored="false" />
     <file path="/a.coffee" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368040199806" ignored="false" />
     <file path="/app.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368728790777" ignored="false" />
-    <file path="/main.css" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368726211129" ignored="false" />
-    <file path="/layout.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368733170745" ignored="false" />
+    <file path="/main.css" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368737087540" ignored="false" />
+    <file path="/layout.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368739325418" ignored="false" />
     <file path="/index.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368042023390" ignored="false" />
     <file path="/startserver.command" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368042359931" ignored="false" />
     <file path="/logo.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368042780487" ignored="false" />
     <file path="/Procfile" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368047667814" ignored="false" />
-    <file path="/Dummy.txt" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368734200902" ignored="false" />
+    <file path="/Dummy.txt" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368739786521" ignored="false" />
     <file path="/readme.md" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368353208979" ignored="false" />
     <file path="/save.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368360779915" ignored="false" />
     <file path="/invest.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368360229799" ignored="false" />
@@ -61,93 +79,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="74" selection-start="470" selection-end="470" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="144" column="0" selection-start="4242" selection-end="4242" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="numbere.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/filters/numbere.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="30" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="invest.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/includes/invest.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="107" selection-start="2959" selection-end="2959" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="save.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/includes/save.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="123" selection-start="2015" selection-end="2015" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spend.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/includes/spend.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="91" selection-start="557" selection-end="557" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="market.jade" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/includes/market.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="136" selection-start="835" selection-end="835" vertical-scroll-proportion="0.43636364">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gruntfile.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gruntfile.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="32" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/layout.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="133" column="52" selection-start="5875" selection-end="5875" vertical-scroll-proportion="0.0">
+            <state line="41" column="17" selection-start="919" selection-end="919" vertical-scroll-proportion="0.46619216">
               <folding />
             </state>
           </provider>
@@ -171,28 +106,28 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/public/img/spinner.svg" />
         <option value="$USER_HOME$/Downloads/SVG-Spinner-master/tools/spingenerator.js" />
         <option value="$PROJECT_DIR$/views/includes/spinner.jade" />
-        <option value="$PROJECT_DIR$/public/css/main.css" />
         <option value="$PROJECT_DIR$/routes/bitcoincharts.js" />
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/public/js/main.js" />
-        <option value="$PROJECT_DIR$/gruntfile.js" />
         <option value="$PROJECT_DIR$/public/js/filters/numberformat.js" />
-        <option value="$PROJECT_DIR$/views/layout.jade" />
         <option value="$PROJECT_DIR$/public/js/filters/numbere.js" />
         <option value="$PROJECT_DIR$/views/includes/spend.jade" />
-        <option value="$PROJECT_DIR$/views/includes/save.jade" />
-        <option value="$PROJECT_DIR$/views/includes/invest.jade" />
+        <option value="$PROJECT_DIR$/gruntfile.js" />
         <option value="$PROJECT_DIR$/views/includes/market.jade" />
+        <option value="$PROJECT_DIR$/views/includes/save.jade" />
+        <option value="$PROJECT_DIR$/public/js/main.js" />
+        <option value="$PROJECT_DIR$/views/includes/invest.jade" />
+        <option value="$PROJECT_DIR$/public/css/main.css" />
+        <option value="$PROJECT_DIR$/views/layout.jade" />
+        <option value="$PROJECT_DIR$/public/css/font-awesome.css" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="72" />
-    <option name="y" value="64" />
+    <option name="x" value="39" />
+    <option name="y" value="31" />
     <option name="width" value="1768" />
     <option name="height" value="998" />
   </component>
@@ -442,11 +377,11 @@
       <recent name="$PROJECT_DIR$/public/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/css" />
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/public/img" />
       <recent name="$PROJECT_DIR$/public/js" />
       <recent name="$PROJECT_DIR$/views/includes" />
-      <recent name="$PROJECT_DIR$/views" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.app.js">
@@ -545,19 +480,23 @@
       <created>1368734205365</created>
       <updated>1368734205365</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="number formatting with postfixes (micro, mili, kilo, Mega, ...)">
+      <created>1368734242091</created>
+      <updated>1368734242092</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="72" y="64" width="1768" height="998" extended-state="0" />
-    <editor active="false" />
+    <frame x="39" y="31" width="1768" height="998" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34318182" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34318182" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26876792" sideWeight="0.6568182" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26876792" sideWeight="0.67045456" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3988006" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -613,7 +552,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="number formatting with postfixes (micro, mili, kilo, Mega, ...)" />
+    <option name="LAST_COMMIT_MESSAGE" value="- fixed crash on ios with animated svg -&gt; icon font&#10;- added launch screen for ios" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -641,6 +580,7 @@
     <MESSAGE value="Release build mechanism and version dependent caching of javascript/css improved &#10;hide angular element until angular is loaded&#10;spinners for every loading operation&#10;improved general help and search engine description" />
     <MESSAGE value="btc-folio faveicon" />
     <MESSAGE value="number formatting with postfixes (micro, mili, kilo, Mega, ...)" />
+    <MESSAGE value="- fixed crash on ios with animated svg -&gt; icon font&#10;- added launch screen for ios" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -658,20 +598,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/img/spinner_startup.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="6" selection-start="250" selection-end="2904" vertical-scroll-proportion="0.63380283">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/includes/spinner.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="2803" selection-end="2803" vertical-scroll-proportion="0.38732395">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="0" selection-start="27" selection-end="27" vertical-scroll-proportion="0.08802817">
@@ -686,26 +612,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="248" column="21" selection-start="5538" selection-end="5538" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="32" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -718,58 +630,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.jade">
+    <entry file="file://$PROJECT_DIR$/views/includes/invest.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="52" selection-start="5875" selection-end="5875" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="74" selection-start="470" selection-end="470" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="144" column="0" selection-start="4242" selection-end="4242" vertical-scroll-proportion="0.0">
+        <state line="14" column="77" selection-start="657" selection-end="657" vertical-scroll-proportion="0.39106146">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/filters/numbere.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="30" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0">
+        <state line="29" column="30" selection-start="529" selection-end="529" vertical-scroll-proportion="0.7909091">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/includes/spend.jade">
+    <entry file="file://$PROJECT_DIR$/public/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="91" selection-start="557" selection-end="557" vertical-scroll-proportion="0.0">
+        <state line="112" column="21" selection-start="3225" selection-end="3231" vertical-scroll-proportion="0.5690909">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/includes/save.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="123" selection-start="2015" selection-end="2015" vertical-scroll-proportion="0.0">
+        <state line="3" column="32" selection-start="99" selection-end="99" vertical-scroll-proportion="0.083798885">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/includes/invest.jade">
+    <entry file="file://$PROJECT_DIR$/views/includes/spend.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="107" selection-start="2959" selection-end="2959" vertical-scroll-proportion="0.0">
+        <state line="10" column="91" selection-start="557" selection-end="557" vertical-scroll-proportion="0.27272728">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/includes/market.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="136" selection-start="835" selection-end="835" vertical-scroll-proportion="0.43636364">
+        <state line="3" column="8" selection-start="77" selection-end="77" vertical-scroll-proportion="0.08181818">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="87" selection-start="726" selection-end="726" vertical-scroll-proportion="0.6272727">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="420" column="12" selection-start="8209" selection-end="8209" vertical-scroll-proportion="0.9491194">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/font-awesome.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="55" selection-start="1860" selection-end="1860" vertical-scroll-proportion="0.57923496">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="56" selection-start="893" selection-end="934" vertical-scroll-proportion="0.4043716">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="17" selection-start="919" selection-end="919" vertical-scroll-proportion="0.46619216">
           <folding />
         </state>
       </provider>

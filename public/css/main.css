@@ -155,7 +155,7 @@ h2 {
 
 
 	background-color: #0097A3;
-	color: #FFFFFF;
+	color: #FFFCEF;
 }
 
 
@@ -246,7 +246,8 @@ header svg {
     margin-right: 10px;
     padding: 5px;
     width: 30px;
-    background: url(/img/spinner.svg) center center no-repeat;
+    text-align: right;
+    color: #FFFCEF;
 }
 
 
@@ -374,6 +375,7 @@ a:hover {
     display: block;
     text-align: center;
     padding: 100px;
+    color: #743300;
 }
 
 
@@ -413,6 +415,10 @@ nav a {
     font-weight: bold;
     font-size: 0.7em;
     color: #2A353C;
+}
+
+nav i {
+    color: #743300;
 }
 
 nav a:hover,

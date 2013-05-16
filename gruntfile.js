@@ -24,7 +24,7 @@ module.exports = function(grunt) {
     , cssmin: {
         combine: {
           files: {
-            'public/css/app.css': ['public/css/normalize.css', 'public/css/main.css' ]
+            'public/css/app.css': ['public/css/normalize.css', 'public/css/font-awesome.css', 'public/css/main.css' ]
           }
         }
       }

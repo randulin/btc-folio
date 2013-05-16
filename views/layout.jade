@@ -5,18 +5,37 @@ html(ng-app)
         meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
         title BTC-Folio
         meta(name='description', content='Btc-Folio – track you bitcoin assets')
-        meta(name='viewport', content='width=device-width')
+        meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
         meta(name='apple-mobile-web-app-capable', content='yes')
         meta(name='apple-mobile-web-app-status-bar-style', content='black')
+
         link(rel='apple-touch-icon', href='img/apple-touch-icon-iphone.png')
         link(rel='apple-touch-icon', sizes='72x72', href='img/apple-touch-icon-ipad.png')
         link(rel='apple-touch-icon', sizes='114x114', href='img/apple-touch-icon-iphone4.png')
         link(rel='apple-touch-icon', sizes='144x144', href='img/apple-touch-icon-ipad3.png')
+
+        //iPhone SPLASHSCREEN
+        link(href='img/apple-touch-startup-image-320x460.png', media='(device-width: 320px)', rel='apple-touch-startup-image')
+        //iPhone (Retina) SPLASHSCREEN
+        link(href='img/apple-touch-startup-image-640x920.png', media='(device-width: 320px) and (-webkit-device-pixel-ratio: 2)', rel='apple-touch-startup-image')
+        //iPhone 5
+        link(href='img/apple-touch-startup-image-640x1096.png', media='(device-width: 320px) and (device-aspect-ratio: 40/71)', rel='apple-touch-startup-image')
+        //iPad (non-Retina) (Portrait)
+        link(href='img/apple-touch-startup-image-768x1004.png', media='screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)', rel='apple-touch-startup-image')
+        //iPad (non-Retina) (Landscape)
+        link(href='img/apple-touch-startup-image-1024x748.png', media='screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)', rel='apple-touch-startup-image')
+        //iPad (Retina) (Portrait)
+        link(href='img/apple-touch-startup-image-1536x2008.png', media='screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio: 2)', rel='apple-touch-startup-image')
+        //iPad (Retina) (Landscape)
+        link(href='img/apple-touch-startup-image-2048x1496.png', media='screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 2)', rel='apple-touch-startup-image')
+
+
         link(href='http://fonts.googleapis.com/css?family=Merriweather+Sans:300,700', rel='stylesheet', type='text/css')
         link(href='http://fonts.googleapis.com/css?family=Donegal+One', rel='stylesheet', type='text/css')
 
         - if (env.debug)
-            link(rel='stylesheet', href='css/normalize.min.css')
+            link(rel='stylesheet', href='css/normalize.css')
+            link(rel='stylesheet', href='css/font-awesome.css')
             link(rel='stylesheet', href='css/main.css')
 
         - else
@@ -41,17 +60,22 @@ html(ng-app)
             nav.ng-cloak
                 ul
                     li
-                        a(href='', ng-click='toggleSettings()') {{settings.text}}
+                        a(href='', ng-click='toggleSettings()')
+                            i.icon-cogs
+                            |  {{settings.text}}
                     li
-                        a(href='', ng-click='refresh()') refresh
+                        a(href='', ng-click='refresh()')
+                            i.icon-refresh
+                            |  refresh
         .header-container
             header.wrapper.clearfix
                 include includes/logo
 
 
         .loading.ng-cloak
-            include includes/spinner.jade
-            p Loading…
+            p
+                i.icon-refresh.icon-spin
+                |  Loading…
 
 
         .main-container.ng-cloak

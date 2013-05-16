@@ -39,7 +39,7 @@ var oneDay = 86400000;
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: oneDay }));
 
 // development only
-if ('development' == app.get('env')) {
+if ('development1' == app.get('env')) {
   app.use(express.errorHandler());
   app.locals.pretty = true;
   env.debug = true;

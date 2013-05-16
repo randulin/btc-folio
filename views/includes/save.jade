@@ -1,6 +1,7 @@
 section
     h2 Save
-    span.spinner(ng-show='market.loading > 0') &nbsp;
+    span.spinner(ng-show='market.loading > 0')
+        i.icon-refresh.icon-spin
     span.help(ng-show='settings.show',ng-mouseover='settings.helptopic.save=true',ng-mouseout='settings.helptopic.save=false') ?
     .settings(ng-show='settings.show')
         form(ng-submit='addAddress()')
