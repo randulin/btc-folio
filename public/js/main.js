@@ -161,6 +161,12 @@ var BTC = function ($scope, $http, $timeout) {
 		updateBlockchain($scope);
 		getBtcTcPortfolio($scope);	
 		updateWeighted($scope);
+    if (ga) {
+      ga('send', 'event', {
+        'eventCategory': 'MainPage',
+        'eventAction': 'Refresh'
+      });
+    }
 	};
 	
 	$scope.toggleSettings = function() {
