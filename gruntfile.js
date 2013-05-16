@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
       build: {
-        src: 'public/js/main.js',
+        src: ['public/js/filters/numbere.js', 'public/js/main.js'],
         dest: 'public/js/main.min.js'
       }
     }

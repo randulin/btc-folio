@@ -29,11 +29,11 @@ section
                 td.address
                     a(target='_blank', title='view on blockchain.info ({{address.address}})', href='https://blockchain.info/address/{{address.address}}', ng-show='address.address')
                         | {{address.address}}
-                td.right {{(address.final_balance/100000000)| currency:""}}
+                td.right {{(address.final_balance/100000000)| numbere}}
                 td.right
-                    | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(address.final_balance/100000000)| currency:""}}
+                    | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(address.final_balance/100000000)| numbere}}
             tr.noborder
                 td.right.bold Total
-                td.right.bold {{(save.wallet.final_balance/100000000)| currency:""}}
+                td.right.bold {{(save.wallet.final_balance/100000000)| numbere}}
                 td.right.bold
-                    | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(save.wallet.final_balance/100000000)| currency:""}}
+                    | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(save.wallet.final_balance/100000000)| numbere}}

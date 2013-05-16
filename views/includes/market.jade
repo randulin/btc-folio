@@ -14,8 +14,7 @@ section
                 td.right {{1| currency:""}}
                 td.right
                     a(target='_blank', href='http://bitcoincharts.com/markets/mtgoxUSD.html')
-                        | {{market.bitcoindata.info.symbol_local.symbol}}{{market.bitcoindata.info.symbol_local.conversion_back|
-                        | currency:""}}
+                        | {{market.bitcoindata.info.symbol_local.symbol}}{{market.bitcoindata.info.symbol_local.conversion_back| numbere}}
                 td.right(ng-class="{negative: getMarketChange('24h') < 0, positive: getMarketChange('24h') > 0}", 24h='24h',rowspan="2")
                     {{getMarketChange('24h') | number:1}}%
                 td.right(ng-class="{negative: getMarketChange('7d') < 0, positive: getMarketChange('7d') > 0}", 7d='7d',rowspan="2")
@@ -23,7 +22,7 @@ section
                 td.right(ng-class="{negative: getMarketChange('30d') < 0, positive: getMarketChange('30d') > 0}", 30d='30d',rowspan="2")
                     {{getMarketChange('30d') | number:1}}%
             tr.noborder
-                td.right {{market.bitcoindata.info.symbol_local.conversion / 100000| currency:""}}m
+                td.right {{market.bitcoindata.info.symbol_local.conversion / 100000000 | numbere}}
                 td.right
                     a(target='_blank', href='http://bitcoincharts.com/markets/mtgoxUSD.html')
                         | {{market.bitcoindata.info.symbol_local.symbol}}{{1| currency:""}}

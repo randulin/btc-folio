@@ -7,5 +7,5 @@ section
             input.btn-primary(type='submit', value='add')
     div
         div(ng-show='spend.value')
-            | {{spend.value| currency:"BTC "}} =
-            | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(spend.value)| currency:""}}
+            | BTC {{spend.value| numbere}} =
+            | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(spend.value)| numbere}}

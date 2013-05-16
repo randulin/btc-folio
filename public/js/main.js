@@ -140,8 +140,8 @@ var BTC = function ($scope, $http, $timeout) {
 		localStorage.setItem('btc-portfolio.invest.BtcTcApiKey', $scope.invest.BtcTcApiKey);
 		getBtcTcPortfolio($scope);
 	};
-	
-	
+
+
 	$scope.getUsd = function(value) {
 		if (!$scope.market.bitcoindata) return undefined;
 		return $scope.market.bitcoindata.info.symbol_local.conversion_back * value;
