@@ -1,5 +1,6 @@
 section
     h2 Invest
+    span.spinner(ng-show='market.loading > 0') &nbsp;
     span.help(ng-show='settings.show',ng-mouseover='settings.helptopic.invest=true',ng-mouseout='settings.helptopic.invest=false') ?
     .settings(ng-show='settings.show')
         form(ng-submit='addBtcTcApiKey()')

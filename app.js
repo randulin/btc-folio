@@ -5,12 +5,19 @@
 
 global.cache = {};
 global.cache.expire = 4 * 60 * 1000;
-global.pjson = require('./package.json');
 
 var express = require('express')
   , routes = require('./routes')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , pkg = require('./package.json');
+
+
+env = {};
+env.version = pkg.version;
+env.serial = env.version.replace(/\D/g, '');
+env.debug = false;
+
 
 var app = express();
 
@@ -25,6 +32,7 @@ app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(app.router);
 
+//caching header:
 var oneDay = 86400000;
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: oneDay }));
 
@@ -32,6 +40,7 @@ app.use(express.static(path.join(__dirname, 'public'), { maxAge: oneDay }));
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
   app.locals.pretty = true;
+  env.debug = true;
 }
 
 

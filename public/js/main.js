@@ -1,16 +1,23 @@
 'use strict';
 
 
+
+
 var BTC = function ($scope, $http, $timeout) {
 	var addresses_raw, spendvalue;
 	
 	//init		
 	$scope.market = {};
+  $scope.market.loading = 0;
+
 	$scope.spend = {};	
 	$scope.spend.value = 0;
 	
 	$scope.save = {}; $scope.save.addresses = [];
+  $scope.save.loading = 0;
+
 	$scope.invest = {};
+  $scope.invest.loading = 0;
 	
 	$scope.settings = {
 		show: true
@@ -52,21 +59,25 @@ var BTC = function ($scope, $http, $timeout) {
 	
 	//blockchain api
 	var updateBlockchain = function($scope) {
+    $timeout(function() { $scope.market.loading++; }, 300);
 		$http.get('./blockchain_address?a=' + $scope.save.addresses.join('|') ).success(function(data) {
 			$scope.market.bitcoindata = data;
 			$scope.market.bitcoindata.info.symbol_local.conversion_back = 1 / $scope.market.bitcoindata.info.symbol_local.conversion * 100000000;
 			$scope.save.blockadr = data.addresses;
 			$scope.save.wallet = data.wallet;
       $scope.lastRefresh = new Date();
+      $scope.market.loading--;
 		});
 	};
 	updateBlockchain($scope);
 	
 	
 	var updateWeighted = function($scope) {
+    $timeout(function() { $scope.market.loading++; }, 300);
 		$http.get('./bitcoincharts_weighted').success(function(data) {
 			$scope.market.ticker = data;
       $scope.lastRefresh = new Date();
+      $scope.market.loading--;
 		});
 	};
 	updateWeighted($scope);
@@ -75,6 +86,7 @@ var BTC = function ($scope, $http, $timeout) {
 	//btctc api
 	var getBtcTcPortfolio = function($scope) {
 		if ($scope.invest.BtcTcApiKey) {
+      $timeout(function() { $scope.invest.loading++; }, 300);
 			$http.get('./btc_tc_act?key=' + $scope.invest.BtcTcApiKey).success(function(data) {
 				$scope.invest.btctc = data;
 	
@@ -82,7 +94,10 @@ var BTC = function ($scope, $http, $timeout) {
 				$scope.invest.totalbtc = $scope.invest.btctc.balance.BTC;
 	
 				for ( var key in $scope.invest.btctc.securities) {
-					$scope.invest.btctc.securities[key].quantity = parseInt($scope.invest.btctc.securities[key].quantity);
+          $timeout(function() { $scope.invest.loading++; }, 300);
+
+					//noinspection JSUnresolvedVariable
+          $scope.invest.btctc.securities[key].quantity = parseInt($scope.invest.btctc.securities[key].quantity);
 	
 					$http.get('./btc_tc_ticker?t=' + key).success(function(data) {
 						var d = $scope.invest.btctc.securities[data.ticker];
@@ -92,8 +107,10 @@ var BTC = function ($scope, $http, $timeout) {
 						$scope.invest.totalbtc += d.total_value;
 
             $scope.lastRefresh = new Date();
+            $scope.invest.loading--;
 					});
 				}
+        $scope.invest.loading--;
 			});
 		}
 	};
@@ -126,12 +143,12 @@ var BTC = function ($scope, $http, $timeout) {
 	
 	
 	$scope.getUsd = function(value) {
-		if (!$scope.market.bitcoindata) return;
+		if (!$scope.market.bitcoindata) return undefined;
 		return $scope.market.bitcoindata.info.symbol_local.conversion_back * value;
 	};
 	
 	
-	$scope.getTotal = function(value) {
+	$scope.getTotal = function() {
 		var tot = 0;
 		tot += $scope.spend.value;
 		
@@ -195,9 +212,9 @@ var BTC = function ($scope, $http, $timeout) {
   var countUp = function() {
     $scope.refresh();
     $timeout(countUp, 1000 * 60 * 5);
-  }
+  };
 
   $timeout(countUp, 1000 * 60 * 5);
-}
+};
 
 BTC.$inject = ['$scope', '$http', '$timeout'];

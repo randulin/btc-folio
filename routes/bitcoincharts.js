@@ -15,7 +15,7 @@ exports.query_weighted = function(request, response) {
     response.send(global.cache.bitcoincharts.data);
     return;
   }
-	
+
 	http.get('http://api.bitcoincharts.com/v1/weighted_prices.json', function(res) {
 	
 	  res.on('data', function(d) {

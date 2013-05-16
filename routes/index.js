@@ -4,7 +4,9 @@
  */
 
 exports.index = function(req, res){
-  res.render('index');
+  var data = {};
+  data.env = env;
+  res.render('index', data);
 };
 
 exports.btc = require('./btc_tc_service');

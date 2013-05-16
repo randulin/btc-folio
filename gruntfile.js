@@ -18,13 +18,13 @@ module.exports = function(grunt) {
       },
       dist: {
         src: ['public/js/angular.min.js', 'public/js/main.min.js'],
-        dest: 'public/js/app-<%= pkg.version %>.js'
+        dest: 'public/js/app.js'
       }
     }
     , cssmin: {
         combine: {
           files: {
-            'public/css/app-<%= pkg.version %>.css': ['public/css/normalize.css', 'public/css/main.css' ]
+            'public/css/app.css': ['public/css/normalize.css', 'public/css/main.css' ]
           }
         }
       }

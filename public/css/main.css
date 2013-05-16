@@ -240,6 +240,17 @@ header svg {
 
 
 
+.spinner {
+    float: right;
+    margin-top: -37px;
+    margin-right: 10px;
+    padding: 5px;
+    width: 30px;
+    background: url(/img/spinner.svg) center center no-repeat;
+}
+
+
+
 table {
     line-height: 1.4em;
     width: 100%;
@@ -348,7 +359,22 @@ a:hover {
 
 
 
+/* startup */
 
+.ng-cloak {
+      display: none;
+}
+
+
+.loading {
+    display: none;
+}
+
+.loading.ng-cloak {
+    display: block;
+    text-align: center;
+    padding: 100px;
+}
 
 
 
@@ -369,6 +395,7 @@ a:hover {
 	background: #FFFCEF;
 	float: left;
 	width: 100%;
+    min-height: 30px;
 }
 
 nav {

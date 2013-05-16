@@ -4,7 +4,7 @@ html(ng-app)
         meta(charset='utf-8')
         meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
         title BTC-Folio
-        meta(name='description', content='Btc-Folio')
+        meta(name='description', content='Btc-Folio – track you bitcoin assets')
         meta(name='viewport', content='width=device-width')
         meta(name='apple-mobile-web-app-capable', content='yes')
         meta(name='apple-mobile-web-app-status-bar-style', content='black')
@@ -15,10 +15,13 @@ html(ng-app)
         link(href='http://fonts.googleapis.com/css?family=Merriweather+Sans:300,700', rel='stylesheet', type='text/css')
         link(href='http://fonts.googleapis.com/css?family=Donegal+One', rel='stylesheet', type='text/css')
 
-        link(rel='stylesheet', href='css/app-0.0.9.css')
-        script(src='/js/app-0.0.9.js')
-        //script(src='/js/main.js')
-        //script(src='/js/angular.min.js')
+        - if (env.debug)
+            link(rel='stylesheet', href='css/normalize.min.css')
+            link(rel='stylesheet', href='css/main.css')
+
+        - else
+            link(rel='stylesheet', href='css/app.css?' + env.serial)
+
 
 
     body(ng-controller='BTC')
@@ -35,7 +38,7 @@ html(ng-app)
 
 
         .nav
-            nav
+            nav.ng-cloak
                 ul
                     li
                         a(href='', ng-click='toggleSettings()') {{settings.text}}
@@ -46,10 +49,16 @@ html(ng-app)
                 include includes/logo
 
 
-        .main-container
+        .loading.ng-cloak
+            include includes/spinner.jade
+            p Loading…
+
+
+        .main-container.ng-cloak
             .main.wrapper.clearfix
                 aside
                     h2 Summary
+                    span.loading(ng-show='') ?
                     div
                         table
                             tr
@@ -108,21 +117,24 @@ html(ng-app)
                         | .
 
                     div
-                        | Use this site to get a snapshot of various aspects of your Bitcoin wealth. All data ist stored in
-                        | the local browser storage for now.
-                        br
-                        br
-                        | The code can be found&nbsp;
-                        a(href="https://github.com/randulin/btc-folio") here
-                        | .
+                        | This site helps you to track you bitcoin assets from blockchain and btct.co.
+                        ul
+                            li No login required, everything is stored in your browsers local storage.
+                            li Open Source: The code can be found&nbsp;
+                                a(href="https://github.com/randulin/btc-folio") here
+                                | .
 
     .footer-container
             footer.wrapper
-                p(ng-show='settings.show') {{lastRefresh}}
+                p.ng-cloak(ng-show='settings.show') {{lastRefresh}}
                 p donate: 1338aqevnKRj8KF5T4gRv4x3LeAfPGZ3fL
 
 
-
+    - if (env.debug)
+        script(src='/js/angular.min.js')
+        script(src='/js/main.js')
+    - else
+        script(src='/js/app.js?' + env.serial)
 
     script
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
