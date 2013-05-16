@@ -11,12 +11,12 @@ angular.module('ng').filter('numbere', function () {
 
     var index = 5;
 
-    while (value > 1000) {
+    while (value > 1000 && value != 0) {
       value = value / 1000;
       index--;
     }
 
-    while (value < 1) {
+    while (value < 1 && value != 0) {
       value = value * 1000;
       index++;
     }
