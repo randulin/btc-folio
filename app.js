@@ -16,7 +16,7 @@ var express = require('express')
 env = {};
 env.version = pkg.version;
 env.serial = env.version.replace(/\D/g, '');
-env.debug = true;
+env.debug = false;
 
 
 var app = express();
