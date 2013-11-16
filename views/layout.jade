@@ -14,19 +14,19 @@ html(ng-app)
         link(rel='apple-touch-icon', sizes='114x114', href='img/apple-touch-icon-iphone4.png')
         link(rel='apple-touch-icon', sizes='144x144', href='img/apple-touch-icon-ipad3.png')
 
-        //iPhone SPLASHSCREEN
+        //- iPhone SPLASHSCREEN
         link(href='img/apple-touch-startup-image-320x460.png', media='(device-width: 320px)', rel='apple-touch-startup-image')
-        //iPhone (Retina) SPLASHSCREEN
+        //- iPhone (Retina) SPLASHSCREEN
         link(href='img/apple-touch-startup-image-640x920.png', media='(device-width: 320px) and (-webkit-device-pixel-ratio: 2)', rel='apple-touch-startup-image')
-        //iPhone 5
+        //- iPhone 5
         link(href='img/apple-touch-startup-image-640x1096.png', media='(device-width: 320px) and (device-aspect-ratio: 40/71)', rel='apple-touch-startup-image')
-        //iPad (non-Retina) (Portrait)
+        //- iPad (non-Retina) (Portrait)
         link(href='img/apple-touch-startup-image-768x1004.png', media='screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)', rel='apple-touch-startup-image')
-        //iPad (non-Retina) (Landscape)
+        //- iPad (non-Retina) (Landscape)
         link(href='img/apple-touch-startup-image-1024x748.png', media='screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)', rel='apple-touch-startup-image')
-        //iPad (Retina) (Portrait)
+        //- iPad (Retina) (Portrait)
         link(href='img/apple-touch-startup-image-1536x2008.png', media='screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio: 2)', rel='apple-touch-startup-image')
-        //iPad (Retina) (Landscape)
+        //- iPad (Retina) (Landscape)
         link(href='img/apple-touch-startup-image-2048x1496.png', media='screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 2)', rel='apple-touch-startup-image')
 
 
@@ -125,10 +125,9 @@ html(ng-app)
                         | You can add or subtract arbitrary amount of BTCs and their value in USD here.
 
                     div.topic(ng-show='settings.helptopic.invest')
-                        | With the API-key from
-                        a(href="https://btct.co/")  btct.co
+                        | Data are pulled from
+                        a(href="https://www.havelockinvestments.com/")  Havelock Investment
                         |  you can watch your assets and BTC ballance.
-                        | You'll get the API key from the account settings page.
 
                     div.topic(ng-show='settings.helptopic.save')
                         | You can add here one or more bitcoin addresses to watch their value here. The BTC value of the addresses is
@@ -141,7 +140,7 @@ html(ng-app)
                         | .
 
                     div
-                        | This site helps you to track you bitcoin assets from blockchain and btct.co.
+                        | This site helps you to track you bitcoin assets from blockchain. Stock ticker are pulled from Havelock Investment
                         ul
                             li No login required, everything is stored in your browsers local storage.
                             li Open Source: The code can be found&nbsp;

@@ -2,6 +2,8 @@ section
     h2 Market
     span.spinner(ng-show='market.loading > 0')
         i.icon-refresh.icon-spin
+    span.spinner(ng-show='market.error', title='{{market.errorStatus}}')
+        i.icon-bell-alt
     span.help(ng-show='settings.show',ng-mouseover='settings.helptopic.market=true',ng-mouseout='settings.helptopic.market=false') ?
     div(ng-show='market.bitcoindata')
         table

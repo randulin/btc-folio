@@ -50,8 +50,7 @@ app.get('/', routes.index);
 
 app.get('/blockchain_address', routes.blockchain.query_address);
 app.get('/bitcoincharts_weighted', routes.bitcoincharts.query_weighted);
-app.get('/btc_tc_act', routes.btc.query_act);
-app.get('/btc_tc_ticker', routes.btc.query_ticker);
+app.get('/havelock', routes.havelock.query);
 
 
 http.createServer(app).listen(app.get('port'), function(){

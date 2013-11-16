@@ -4,7 +4,7 @@
 
 
 var BTC = function ($scope, $http, $timeout) {
-	var addresses_raw, spendvalue;
+	var addresses_raw, spendvalue, securities_raw;
 	
 	//init		
 	$scope.market = {};
@@ -13,7 +13,7 @@ var BTC = function ($scope, $http, $timeout) {
 	$scope.spend = {};	
 	$scope.spend.value = 0;
 	
-	$scope.save = {}; $scope.save.addresses = [];
+	$scope.save = {};
   $scope.save.loading = 0;
 
 	$scope.invest = {};
@@ -35,15 +35,21 @@ var BTC = function ($scope, $http, $timeout) {
 	
 	if (addresses_raw = localStorage.getItem('btc-portfolio.save.addresses')) {
 		try {
-			$scope.save.addresses = JSON.parse(addresses_raw);
+			$scope.save.addresses = JSON.parse(addresses_raw)[0];
 		} catch (e) {
 			console.warn(e);
 		}
 	}
 	
-	$scope.invest.BtcTcApiKey = localStorage.getItem('btc-portfolio.invest.BtcTcApiKey');
+  if (securities_raw = localStorage.getItem('btc-portfolio.invest.securities')) {
+    try {
+      $scope.invest.Securities = JSON.parse(securities_raw)[0];
+    } catch (e) {
+      console.warn(e);
+    }
+  }
 	
-	if ($scope.spend.value || $scope.invest.BtcTcApiKey || $scope.save.addresses.length) {
+	if ($scope.spend.value || $scope.invest.Securities || $scope.save.addresses.length) {
 		$scope.settings = {
 			show: false
 			, text: "show settings"
@@ -52,69 +58,78 @@ var BTC = function ($scope, $http, $timeout) {
 		var s = {};
 		s.BTC = $scope.spend.value;
 		s.Addresses = $scope.save.addresses;
-		s.BtcTcApiKey = $scope.invest.BtcTcApiKey;
+		s.Securities = $scope.invest.Securities;
 		$scope.jsonimport = JSON.stringify(s, null, 4);
 	}
 
 	
 	//blockchain api
 	var updateBlockchain = function($scope) {
+    if (!$scope.save.addresses) return;
+    $scope.market.error = false;
+
     $timeout(function() { $scope.market.loading++; }, 300);
-		$http.get('./blockchain_address?a=' + $scope.save.addresses.join('|') ).success(function(data) {
-			$scope.market.bitcoindata = data;
-			$scope.market.bitcoindata.info.symbol_local.conversion_back = 1 / $scope.market.bitcoindata.info.symbol_local.conversion * 100000000;
-			$scope.save.blockadr = data.addresses;
-			$scope.save.wallet = data.wallet;
-      $scope.lastRefresh = new Date();
-      $scope.market.loading--;
-		});
+		$http.get('./blockchain_address?a=' + Object.keys($scope.save.addresses).join('|') )
+        .success(function(data) {
+          $scope.market.bitcoindata = data;
+          $scope.market.bitcoindata.info.symbol_local.conversion_back = 1 / $scope.market.bitcoindata.info.symbol_local.conversion * 100000000;
+          $scope.save.blockadr = data.addresses;
+          $scope.save.wallet = data.wallet;
+          $scope.lastRefresh = new Date();
+          $scope.market.loading--;
+        })
+        .error(function(data, status, headers, config) {
+          $scope.market.loading--;
+          $scope.market.error = true;
+          $scope.market.errorStatus = 'blockchain_address: ' + status + ' – ' + data;
+        });
 	};
 	updateBlockchain($scope);
 	
 	
 	var updateWeighted = function($scope) {
+    $scope.market.error = false;
     $timeout(function() { $scope.market.loading++; }, 300);
-		$http.get('./bitcoincharts_weighted').success(function(data) {
-			$scope.market.ticker = data;
-      $scope.lastRefresh = new Date();
-      $scope.market.loading--;
-		});
+		$http.get('./bitcoincharts_weighted')
+        .success(function(data) {
+          $scope.market.ticker = data;
+          $scope.lastRefresh = new Date();
+          $scope.market.loading--;
+        })
+        .error(function(data, status, headers, config) {
+          $scope.market.loading--;
+          $scope.market.error = true;
+          $scope.market.errorStatus = 'bitcoincharts_weighted: ' + status + ' – ' + data;
+        });
 	};
 	updateWeighted($scope);
 	
 
-	//btctc api
-	var getBtcTcPortfolio = function($scope) {
-		if ($scope.invest.BtcTcApiKey) {
+	//havelock api
+	var getSecurities = function($scope) {
+    $scope.invest.error = false;
+
+		if ($scope.invest.Securities) {
       $timeout(function() { $scope.invest.loading++; }, 300);
-			$http.get('./btc_tc_act?key=' + $scope.invest.BtcTcApiKey).success(function(data) {
-				$scope.invest.btctc = data;
-	
-				$scope.invest.btctc.balance.BTC = parseFloat($scope.invest.btctc.balance.BTC);
-				$scope.invest.totalbtc = $scope.invest.btctc.balance.BTC;
-	
-				for ( var key in $scope.invest.btctc.securities) {
-          $timeout(function() { $scope.invest.loading++; }, 300);
-
-					//noinspection JSUnresolvedVariable
-          $scope.invest.btctc.securities[key].quantity = parseInt($scope.invest.btctc.securities[key].quantity);
-	
-					$http.get('./btc_tc_ticker?t=' + key).success(function(data) {
-						var d = $scope.invest.btctc.securities[data.ticker];
-						d.market = data;
-						d.market.bid = parseFloat(d.market.bid);
-						d.total_value = d.market.bid * d.quantity;
-						$scope.invest.totalbtc += d.total_value;
-
-            $scope.lastRefresh = new Date();
+			$http.get('./havelock')
+          .success(function(data) {
+            $scope.invest.Tickers = data;
             $scope.invest.loading--;
-					});
-				}
-        $scope.invest.loading--;
-			});
+          })
+          .error(function(data, status, headers, config) {
+            $scope.invest.loading--;
+            $scope.invest.error = true;
+            $scope.invest.errorStatus = status + ' – ' + data;
+          });
 		}
 	};
-	getBtcTcPortfolio($scope);
+  getSecurities($scope);
+
+
+
+
+
+
 	
 	$scope.addSpendValue = function() {
 		$scope.spend.value += parseFloat($scope.spend.ValueAdd);
@@ -123,10 +138,18 @@ var BTC = function ($scope, $http, $timeout) {
 	};
 
 	$scope.addAddress = function() {
-		$scope.save.addresses.push($scope.save.BitCoinAddress);
-		$scope.save.BitCoinAddress = '';
-		localStorage.setItem('btc-portfolio.save.addresses', JSON.stringify($scope.save.addresses));
+    $scope.save.addresses = $scope.save.addresses || {};
+
+    var a = {};
+    a.Address = $scope.save.BitCoinAddress;
+    a.Desc = $scope.save.BitCoinAddressDesc;
+
+    $scope.save.addresses[a.Address] = a;
+		localStorage.setItem('btc-portfolio.save.addresses', JSON.stringify([$scope.save.addresses]));
 		updateBlockchain($scope);
+
+    $scope.save.BitCoinAddress = '';
+    $scope.save.BitCoinAddressDesc = '';
 	};
 	
 	$scope.removeAddress = function(adr) {
@@ -135,10 +158,18 @@ var BTC = function ($scope, $http, $timeout) {
 		updateBlockchain($scope);
 	};	
 
-	$scope.addBtcTcApiKey = function() {
-		$scope.invest.BtcTcApiKey = $scope.invest.BtcTcApiKey; //?
-		localStorage.setItem('btc-portfolio.invest.BtcTcApiKey', $scope.invest.BtcTcApiKey);
-		getBtcTcPortfolio($scope);
+	$scope.addSecurity = function() {
+    $scope.invest.Securities = $scope.invest.Securities || {};
+
+    var s = {};
+    s.Ticker = $scope.invest.Ticker;
+    s.Quantity = $scope.invest.Quantity;
+
+		$scope.invest.Securities[s.Ticker] = s;
+		localStorage.setItem('btc-portfolio.invest.securities', JSON.stringify([$scope.invest.Securities]));
+
+    $scope.invest.Ticker = "";
+    $scope.invest.Quantity = "";
 	};
 
 
@@ -154,6 +185,7 @@ var BTC = function ($scope, $http, $timeout) {
 		
 		if ($scope.save.wallet) tot += $scope.save.wallet.final_balance/100000000;
 		if ($scope.invest.totalbtc) tot += $scope.invest.totalbtc;
+    if ($scope.getSum($scope.invest.Securities)) tot += $scope.getSum($scope.invest.Securities);
 		return tot;
 	};
 	
@@ -182,9 +214,21 @@ var BTC = function ($scope, $http, $timeout) {
 
 	
 	$scope.getTickerChange = function(security, key) {
-		if (!security.market) return null;
-		return  ((security.market.bid - security.market[key])/security.market[key] * 100);
+		if (!security || !security.last) return null;
+		return  ((security.last - security[key].vwap)/security[key].vwap * 100);
 	};
+
+
+  $scope.getSum = function(securities, key) {
+    var total = 0;
+    for (key in securities) {
+      var security = securities[key];
+      if ($scope.invest.Tickers) {
+        total += $scope.invest.Tickers[security.Ticker].last*security.Quantity;
+      }
+    }
+    return total;
+  }
 
 	
 	$scope.importSettings = function() {
@@ -221,6 +265,8 @@ var BTC = function ($scope, $http, $timeout) {
   };
 
   $timeout(countUp, 1000 * 60 * 5);
+
 };
 
 BTC.$inject = ['$scope', '$http', '$timeout'];
+

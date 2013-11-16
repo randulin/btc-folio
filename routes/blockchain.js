@@ -30,16 +30,27 @@ exports.query_address = function(request, response) {
 		  
 	  res.on('end', function() {
 
-      global.cache.blockchain = global.cache.blockchain || {};
-      global.cache.blockchain[cachekey] = {};
-      global.cache.blockchain[cachekey].data = JSON.stringify(JSON.parse(data));
-      global.cache.blockchain[cachekey].expires = Date.now() + global.cache.expire;
-      console.log('added blockchain (' + cachekey + ') data to cache expires: ' + new Date(global.cache.blockchain[cachekey].expires));
+      if (!data) {
+        response.send(500, "no data");
+        return;
+      }
 
-		  response.send(global.cache.blockchain[cachekey].data);
+      try {
+        global.cache.blockchain = global.cache.blockchain || {};
+        global.cache.blockchain[cachekey] = {};
+        global.cache.blockchain[cachekey].data = JSON.stringify(JSON.parse(data));
+        global.cache.blockchain[cachekey].expires = Date.now() + global.cache.expire;
+        console.log('added blockchain (' + cachekey + ') data to cache expires: ' + new Date(global.cache.blockchain[cachekey].expires));
+        response.send(global.cache.blockchain[cachekey].data);
+      } catch(e) {
+        console.error(e);
+        response.send(500, "Error");
+      }
+
 	  });
 	
-	}).on('error', function(e) {
-	  console.error(e);
-	});
+  }).on('error', function(e) {
+    console.error(e);
+    response.send(500, "Error");
+  });
 };

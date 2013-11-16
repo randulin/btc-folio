@@ -9,6 +9,10 @@ angular.module('ng').filter('numbere', function () {
 
     if(typeof value == 'undefined') return '';
 
+    if (typeof(value) !== "number") {
+      value = parseFloat(value);
+    }
+
     var index = 5;
 
     while (value > 1000 && value != 0) {
