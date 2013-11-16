@@ -80,7 +80,7 @@ html(ng-app)
 
         .main-container.ng-cloak
             .main.wrapper.clearfix
-                aside
+                aside(ng-show='getTotal() > 0')
                     h2 Summary
                     span.loading(ng-show='') ?
                     div

@@ -65,11 +65,13 @@ var BTC = function ($scope, $http, $timeout) {
 	
 	//blockchain api
 	var updateBlockchain = function($scope) {
-    if (!$scope.save.addresses) return;
     $scope.market.error = false;
 
+    var addresses = [];
+    if ($scope.save.addresses) addresses = Object.keys($scope.save.addresses);
+
     $timeout(function() { $scope.market.loading++; }, 300);
-		$http.get('./blockchain_address?a=' + Object.keys($scope.save.addresses).join('|') )
+		$http.get('./blockchain_address?a=' + addresses.join('|') )
         .success(function(data) {
           $scope.market.bitcoindata = data;
           $scope.market.bitcoindata.info.symbol_local.conversion_back = 1 / $scope.market.bitcoindata.info.symbol_local.conversion * 100000000;
@@ -109,19 +111,17 @@ var BTC = function ($scope, $http, $timeout) {
 	var getSecurities = function($scope) {
     $scope.invest.error = false;
 
-		if ($scope.invest.Securities) {
-      $timeout(function() { $scope.invest.loading++; }, 300);
-			$http.get('./havelock')
-          .success(function(data) {
-            $scope.invest.Tickers = data;
-            $scope.invest.loading--;
-          })
-          .error(function(data, status, headers, config) {
-            $scope.invest.loading--;
-            $scope.invest.error = true;
-            $scope.invest.errorStatus = status + ' – ' + data;
-          });
-		}
+    $timeout(function() { $scope.invest.loading++; }, 300);
+    $http.get('./havelock')
+        .success(function(data) {
+          $scope.invest.Tickers = data;
+          $scope.invest.loading--;
+        })
+        .error(function(data, status, headers, config) {
+          $scope.invest.loading--;
+          $scope.invest.error = true;
+          $scope.invest.errorStatus = status + ' – ' + data;
+        });
 	};
   getSecurities($scope);
 
@@ -299,6 +299,7 @@ var BTC = function ($scope, $http, $timeout) {
 
   $scope.resetLocalStorage = function() {
     localStorage.clear();
+    location.reload();
   }
 
   var countUp = function() {

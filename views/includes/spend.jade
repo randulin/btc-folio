@@ -1,4 +1,4 @@
-section
+section(ng-show='spend.value || settings.show')
     h2 Spend
     span.help(ng-show='settings.show',ng-mouseover='settings.helptopic.spend=true',ng-mouseout='settings.helptopic.spend=false') ?
     .settings(ng-show='settings.show')
