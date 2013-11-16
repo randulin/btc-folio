@@ -24,11 +24,6 @@ exports.query_weighted = function(request, response) {
 		  
 	  res.on('end', function() {
 
-      if (!data) {
-        response.send(500, "no data");
-        return;
-      }
-
       try {
         global.cache.bitcoincharts = global.cache.bitcoincharts || {};
         global.cache.bitcoincharts.data = JSON.stringify(JSON.parse(data));
