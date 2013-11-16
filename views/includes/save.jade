@@ -4,18 +4,22 @@ section
         i.icon-refresh.icon-spin
     span.help(ng-show='settings.show',ng-mouseover='settings.helptopic.save=true',ng-mouseout='settings.helptopic.save=false') ?
     .settings(ng-show='settings.show')
-        form(ng-submit='addAddress()')
-            input(type='text', ng-model='save.BitCoinAddress', placeholder='Add address to watch')
-            input(type='text', ng-model='save.BitCoinAddressDesc', placeholder='Description')
-            input.btn-primary(type='submit', value='add')
+        form
+            input(type='text', ng-model='save.BitCoinAddress', placeholder='address to watch')
+            input(type='text', ng-model='save.BitCoinAddressDesc', placeholder='description')
+            button.btn-primary(ng-click='addAddress()') add/update
 
     div(ng-show='settings.show')
         table(ng-show='save.blockadr')
             tr(ng-repeat='address in save.blockadr')
                 td.action
-                    a(href='', title='remove this address from the list', ng-click='removeAddress(address.address)') [remove]
+                    a(href='', title='remove this address from the list', ng-click='editAddress(address.address)')
+                        i.icon-edit
+                    a(href='', title='remove this address from the list', ng-click='removeAddress(address.address)')
+                        i.icon-trash
+
                 td
-                    span
+                    span.address
                         {{save.addresses[address.address].Desc}} ({{address.address}})
 
 

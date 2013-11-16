@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73bd5805-3332-4c68-adf1-ea4007c5032d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/app.css" afterPath="$PROJECT_DIR$/public/css/app.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="$PROJECT_DIR$/public/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/includes/invest.jade" afterPath="$PROJECT_DIR$/views/includes/invest.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.jade" afterPath="$PROJECT_DIR$/views/layout.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/main.css" afterPath="$PROJECT_DIR$/public/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/main.js" afterPath="$PROJECT_DIR$/public/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/includes/market.jade" afterPath="$PROJECT_DIR$/views/includes/market.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/includes/save.jade" afterPath="$PROJECT_DIR$/views/includes/save.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/includes/spend.jade" afterPath="$PROJECT_DIR$/views/includes/spend.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="btc-folio.iws" />
@@ -12,25 +19,25 @@
     <ignored path="public/js/main.min.js" />
     <file path="/a.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368729364829" ignored="false" />
     <file path="/a.coffee" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368040199806" ignored="false" />
-    <file path="/app.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384561598788" ignored="false" />
-    <file path="/main.css" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368737087540" ignored="false" />
-    <file path="/layout.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384560593165" ignored="false" />
+    <file path="/app.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384620078124" ignored="false" />
+    <file path="/main.css" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384619850793" ignored="false" />
+    <file path="/layout.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384617215412" ignored="false" />
     <file path="/index.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368042023390" ignored="false" />
     <file path="/startserver.command" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368042359931" ignored="false" />
     <file path="/logo.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368042780487" ignored="false" />
     <file path="/Procfile" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368047667814" ignored="false" />
-    <file path="/Dummy.txt" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384574762942" ignored="false" />
+    <file path="/Dummy.txt" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384614835287" ignored="false" />
     <file path="/readme.md" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368353208979" ignored="false" />
-    <file path="/save.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384568305127" ignored="false" />
-    <file path="/invest.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384569354114" ignored="false" />
+    <file path="/save.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384617955938" ignored="false" />
+    <file path="/invest.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384619794757" ignored="false" />
     <file path="/market.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384570674001" ignored="false" />
-    <file path="/spend.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368734006122" ignored="false" />
+    <file path="/spend.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384616680903" ignored="false" />
     <file path="/package.json" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368363842108" ignored="false" />
     <file path="/index.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384559711650" ignored="false" />
     <file path="/bitcoincharts.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384573301435" ignored="false" />
     <file path="/blockchain.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384571991332" ignored="false" />
     <file path="/btc_tc_service.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368118718903" ignored="false" />
-    <file path="/main.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384570164690" ignored="false" />
+    <file path="/main.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384619937699" ignored="false" />
     <file path="/gruntfile.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368731738338" ignored="false" />
     <file path="/app-0.0.7.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368365834979" ignored="false" />
     <file path="/spingenerator.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368725374615" ignored="false" />
@@ -61,7 +68,25 @@
       <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="254" column="104" selection-start="7163" selection-end="7163" vertical-scroll-proportion="0.0">
+            <state line="174" column="42" selection-start="4574" selection-end="4574" vertical-scroll-proportion="-16.153847">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="710" column="21" selection-start="12246" selection-end="12246" vertical-scroll-proportion="-25.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/layout.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="130" column="27" selection-start="6502" selection-end="6502" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -70,7 +95,25 @@
       <file leaf-file-name="invest.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/includes/invest.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="70" selection-start="1706" selection-end="1706" vertical-scroll-proportion="0.0">
+            <state line="10" column="0" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="save.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/includes/save.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="38" selection-start="679" selection-end="993" vertical-scroll-proportion="-10.384615">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spend.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/includes/spend.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="16" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -79,7 +122,7 @@
       <file leaf-file-name="market.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/includes/market.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="23" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
+            <state line="6" column="29" selection-start="252" selection-end="254" vertical-scroll-proportion="-3.4615386">
               <folding />
             </state>
           </provider>
@@ -88,43 +131,16 @@
       <file leaf-file-name="havelock_service.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/havelock_service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="0" selection-start="1648" selection-end="1648" vertical-scroll-proportion="0.0">
+            <state line="20" column="61" selection-start="530" selection-end="578" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="blockchain.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/blockchain.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="30" selection-start="620" selection-end="620" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bitcoincharts.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/bitcoincharts.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="2" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="17" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="18" column="17" selection-start="349" selection-end="349" vertical-scroll-proportion="0.15492958">
               <folding />
             </state>
           </provider>
@@ -148,21 +164,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/css/main.css" />
         <option value="$PROJECT_DIR$/public/css/font-awesome.css" />
         <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/views/layout.jade" />
-        <option value="$PROJECT_DIR$/views/includes/spend.jade" />
         <option value="$PROJECT_DIR$/public/js/filters/numbere.js" />
-        <option value="$PROJECT_DIR$/views/includes/save.jade" />
-        <option value="$PROJECT_DIR$/views/includes/market.jade" />
         <option value="$PROJECT_DIR$/routes/havelock_service.js" />
         <option value="$PROJECT_DIR$/routes/blockchain.js" />
         <option value="$PROJECT_DIR$/startserver.command" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/routes/bitcoincharts.js" />
-        <option value="$PROJECT_DIR$/public/js/main.js" />
+        <option value="$PROJECT_DIR$/views/includes/market.jade" />
+        <option value="$PROJECT_DIR$/views/includes/spend.jade" />
+        <option value="$PROJECT_DIR$/views/layout.jade" />
+        <option value="$PROJECT_DIR$/views/includes/save.jade" />
         <option value="$PROJECT_DIR$/views/includes/invest.jade" />
+        <option value="$PROJECT_DIR$/public/css/main.css" />
+        <option value="$PROJECT_DIR$/public/js/main.js" />
         <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
@@ -233,6 +249,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -351,9 +368,26 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="btc-folio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="btc-folio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -371,16 +405,16 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="234" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1022" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1023" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1022" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="229" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="226" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -532,7 +566,11 @@
       <created>1384574187499</created>
       <updated>1384574187499</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="- Version Bumb, Release">
+      <created>1384574875085</created>
+      <updated>1384574875085</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -600,7 +638,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Bugfix for first run&#10;- Fixed import" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Version Bumb, Release" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -633,6 +671,7 @@
     <MESSAGE value="- fixed loop forever in format number function" />
     <MESSAGE value="- Added Havelock investment support for stock quotes&#10;- Added support for bitcoinaddress descriptions&#10;- Better error handling&#10;- Removed support for btct.co" />
     <MESSAGE value="- Bugfix for first run&#10;- Fixed import" />
+    <MESSAGE value="- Version Bumb, Release" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -650,54 +689,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/includes/spend.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="98" selection-start="331" selection-end="331" vertical-scroll-proportion="0.08802817" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/includes/save.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="24" selection-start="904" selection-end="904" vertical-scroll-proportion="0.32181168" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/filters/numbere.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="20" selection-start="229" selection-end="229" vertical-scroll-proportion="0.19366197" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="131" selection-end="131" vertical-scroll-proportion="0.19366197" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/includes/market.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="23" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/havelock_service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="0" selection-start="1648" selection-end="1648" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/blockchain.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="30" selection-start="620" selection-end="620" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" />
@@ -713,6 +704,13 @@
         <state line="1" column="18" selection-start="30" selection-end="30" vertical-scroll-proportion="0.017605634" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/blockchain.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="30" selection-start="620" selection-end="620" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/bitcoincharts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="2" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
@@ -720,30 +718,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/main.js">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="254" column="104" selection-start="7163" selection-end="7163" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/includes/market.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="29" selection-start="252" selection-end="254" vertical-scroll-proportion="-3.4615386">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="1729" selection-start="1729" selection-end="1729" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/includes/spend.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="16" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/includes/save.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="38" selection-start="679" selection-end="993" vertical-scroll-proportion="-10.384615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="130" column="27" selection-start="6502" selection-end="6502" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/havelock_service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="61" selection-start="530" selection-end="578" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/includes/invest.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="70" selection-start="1706" selection-end="1706" vertical-scroll-proportion="0.0">
+        <state line="10" column="0" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="710" column="21" selection-start="12246" selection-end="12246" vertical-scroll-proportion="-25.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="174" column="42" selection-start="4574" selection-end="4574" vertical-scroll-proportion="-16.153847">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="17" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="18" column="17" selection-start="349" selection-end="349" vertical-scroll-proportion="0.15492958">
           <folding />
         </state>
       </provider>

@@ -134,7 +134,13 @@ var BTC = function ($scope, $http, $timeout) {
 	$scope.addSpendValue = function() {
 		$scope.spend.value += parseFloat($scope.spend.ValueAdd);
 		$scope.spend.ValueAdd = '';
-		localStorage.setItem('btc-portfolio.spend.value', $scope.spend.value);
+    $scope.refreshInternal();
+	};
+
+	$scope.resetSpendValue = function() {
+		$scope.spend.value = 0;
+		$scope.spend.ValueAdd = '';
+    $scope.refreshInternal();
 	};
 
 	$scope.addAddress = function() {
@@ -145,32 +151,48 @@ var BTC = function ($scope, $http, $timeout) {
     a.Desc = $scope.save.BitCoinAddressDesc;
 
     $scope.save.addresses[a.Address] = a;
-		localStorage.setItem('btc-portfolio.save.addresses', JSON.stringify([$scope.save.addresses]));
-		updateBlockchain($scope);
+
+    $scope.refreshInternal();
 
     $scope.save.BitCoinAddress = '';
     $scope.save.BitCoinAddressDesc = '';
 	};
 	
 	$scope.removeAddress = function(adr) {
-		$scope.save.addresses = $scope.save.addresses.filter(function(element) { return element !== adr; } );
-		localStorage.setItem('btc-portfolio.save.addresses', JSON.stringify($scope.save.addresses));
-		updateBlockchain($scope);
-	};	
+    delete $scope.save.addresses[adr];
+    $scope.refreshInternal();
+	};
+
+	$scope.editAddress = function(adr) {
+    $scope.save.BitCoinAddress = $scope.save.addresses[adr].Address;
+    $scope.save.BitCoinAddressDesc = $scope.save.addresses[adr].Desc;
+	};
 
 	$scope.addSecurity = function() {
     $scope.invest.Securities = $scope.invest.Securities || {};
 
     var s = {};
-    s.Ticker = $scope.invest.Ticker;
+    s.Ticker = $scope.invest.Ticker.symbol;
     s.Quantity = $scope.invest.Quantity;
 
 		$scope.invest.Securities[s.Ticker] = s;
-		localStorage.setItem('btc-portfolio.invest.securities', JSON.stringify([$scope.invest.Securities]));
 
     $scope.invest.Ticker = "";
     $scope.invest.Quantity = "";
+    $scope.refreshInternal();
 	};
+
+  $scope.editTicker = function(security) {
+    $scope.invest.Ticker = security.Ticker;
+    $scope.invest.Quantity = security.Quantity;
+    $scope.refreshInternal();
+  }
+
+  $scope.removeTicker = function(security) {
+    delete $scope.invest.Securities[security.Ticker];
+    if (Object.keys($scope.invest.Securities).length == 0) delete $scope.invest.Securities;
+    $scope.refreshInternal();
+  }
 
 
 	$scope.getUsd = function(value) {
@@ -190,9 +212,7 @@ var BTC = function ($scope, $http, $timeout) {
 	};
 	
 	$scope.refresh = function() {
-		updateBlockchain($scope);
-    getSecurities($scope);
-		updateWeighted($scope);
+    $scope.refreshInternal(true);
     if (ga) {
       ga('send', 'event', {
         'eventCategory': 'MainPage',
@@ -200,6 +220,25 @@ var BTC = function ($scope, $http, $timeout) {
       });
     }
 	};
+
+	$scope.refreshInternal = function(doNotWriteLocalStorage) {
+		updateBlockchain($scope);
+    getSecurities($scope);
+		updateWeighted($scope);
+
+    var s = {};
+    s.BTC = $scope.spend.value;
+    s.Addresses = $scope.save.addresses;
+    s.Securities = $scope.invest.Securities;
+    $scope.jsonimport = JSON.stringify(s, null, 3);
+
+    if (doNotWriteLocalStorage) return;
+    localStorage.setItem('btc-portfolio.invest.securities', JSON.stringify([$scope.invest.Securities]));
+    localStorage.setItem('btc-portfolio.save.addresses', JSON.stringify([$scope.save.addresses]));
+    localStorage.setItem('btc-portfolio.spend.value', $scope.spend.value);
+	};
+
+
 	
 	$scope.toggleSettings = function() {
 		$scope.settings.show = !$scope.settings.show;
@@ -223,19 +262,19 @@ var BTC = function ($scope, $http, $timeout) {
     var total = 0;
     for (key in securities) {
       var security = securities[key];
-      if ($scope.invest.Tickers) {
+      if ($scope.invest.Tickers && $scope.invest.Tickers[security.Ticker]) {
         total += $scope.invest.Tickers[security.Ticker].last*security.Quantity;
       }
     }
     return total;
   }
 
-	
+
 	$scope.importSettings = function() {
 		var data = JSON.parse($scope.jsonimport);
 		
 		if (!data) {
-			alert('Error parsing Json');
+			alert('Error in import file');
 			return;
 		}
 
@@ -257,6 +296,10 @@ var BTC = function ($scope, $http, $timeout) {
 
     $scope.toggleSettings();
 	};
+
+  $scope.resetLocalStorage = function() {
+    localStorage.clear();
+  }
 
   var countUp = function() {
     $scope.refresh();

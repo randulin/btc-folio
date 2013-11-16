@@ -105,11 +105,12 @@ html(ng-app)
                         h2 Export/Import Settings
                         span.help(ng-show='settings.show',ng-mouseover='settings.helptopic.export=true',ng-mouseout='settings.helptopic.export=false') ?
                         .settings(ng-show='settings.show')
-                            form(ng-submit='importSettings()')
+                            form
                                 textarea(rows='10', style='width: 100%; font-size: 0.8em;', ng-model='jsonimport') {{getSettings()}}
                                 br
                                 div(style="text-align: right")
-                                    input.btn-primary(type='submit', value='Import Settings')
+                                    button.btn-primary(ng-click='importSettings()') import
+                                    button.btn-primary(ng-click='resetLocalStorage()') reset all data
 
                 aside(ng-show='settings.show')
                     h2 Help
@@ -127,7 +128,7 @@ html(ng-app)
                     div.topic(ng-show='settings.helptopic.invest')
                         | Data are pulled from
                         a(href="https://www.havelockinvestments.com/")  Havelock Investment
-                        |  you can watch your assets and BTC ballance.
+                        | .
 
                     div.topic(ng-show='settings.helptopic.save')
                         | You can add here one or more bitcoin addresses to watch their value here. The BTC value of the addresses is

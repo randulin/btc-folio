@@ -2,18 +2,19 @@ section
     h2 Invest
     span.spinner(ng-show='invest.loading > 0')
         i.icon-refresh.icon-spin
-    span.spinner(ng-show='invest.error', title='{{invest.errorStatus}}')
-        i.icon-bell-alt
+    span.spinner(ng-show='invest.error', title='Error fetching data – {{invest.errorStatus}}')
+        i.icon-warning-sign
     span.help(ng-show='settings.show',ng-mouseover='settings.helptopic.invest=true',ng-mouseout='settings.helptopic.invest=false') ?
     .settings(ng-show='settings.show')
-        form(ng-submit='addSecurity()')
-            input(type='text', ng-model='invest.Ticker', placeholder='Symbol (Havelock Invest)')
-            input(type='text', ng-model='invest.Quantity', placeholder='Quantity')
-            input.btn-primary(type='submit', value='add')
+        form()
+            select(ng-model="invest.Ticker", name="{string}", required, ng-options="c for (c,v) in invest.Tickers")
+            input(type='text', ng-model='invest.Quantity', placeholder='quantity')
+            button.btn-primary(ng-click='addSecurity()') add/update
     div
         table#rt1.rt.cf(ng-show='invest.Securities')
             thead.cf
                 tr
+                    th(ng-show='settings.show')
                     th Ticker
                     th.right(title='latest bid') Bid
                     th.right(title='quantity hold') Qty
@@ -25,6 +26,11 @@ section
 
             tbody.transform
                 tr.data(ng-repeat='security in invest.Securities')
+                    td.action(ng-show='settings.show')
+                        a(href='', title='remove this address from the list', ng-click='editTicker(security)')
+                            i.icon-edit
+                        a(href='', title='remove this address from the list', ng-click='removeTicker(security)')
+                            i.icon-trash
                     td.ticker
                         a(target='_blank', title='view on havelock', href='https://www.havelockinvestments.com/fund.php?symbol={{security.Ticker}}', ng-show='security.Ticker') {{security.Ticker}}
 

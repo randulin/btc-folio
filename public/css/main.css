@@ -291,6 +291,10 @@ td.action {
     font-size: 0.8em;
 }
 
+td.action i {
+    margin-right: 3px;
+}
+
 
 tr  {
     border-bottom: 1px solid #CFCCBF;
@@ -702,3 +706,9 @@ div.settings {
         page-break-after: avoid;
     }
 }
+
+
+button, input, select {
+    margin-right: 3px;
+}
+

@@ -3,8 +3,10 @@ section
     span.help(ng-show='settings.show',ng-mouseover='settings.helptopic.spend=true',ng-mouseout='settings.helptopic.spend=false') ?
     .settings(ng-show='settings.show')
         form(ng-submit='addSpendValue()')
-            input(type='text', ng-model='spend.ValueAdd', placeholder='Add btc (+/-)', smart-float)
-            input.btn-primary(type='submit', value='add')
+            input(type='text', ng-model='spend.ValueAdd', placeholder='add btc (+/-)', smart-float)
+            button.btn-primary(type='submit') add
+            button.btn-primary(ng-click='resetSpendValue') set to zero
+
     div
         div(ng-show='spend.value')
             | BTC {{spend.value| numbere}} =
