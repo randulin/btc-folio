@@ -1,38 +1,44 @@
-section
+section(ng-show='save.blockadr || settings.show')
     h2 Save
+    span.spinner(ng-show='market.loading > 0')
+        i.icon-refresh.icon-spin
     span.help(ng-show='settings.show',ng-mouseover='settings.helptopic.save=true',ng-mouseout='settings.helptopic.save=false') ?
     .settings(ng-show='settings.show')
-        form(ng-submit='addAddress()')
-            input(type='text', ng-model='save.BitCoinAddress', placeholder='Add address to watch')
-            input.btn-primary(type='submit', value='add')
+        form
+            input(type='text', ng-model='save.BitCoinAddress', placeholder='address to watch')
+            input(type='text', ng-model='save.BitCoinAddressDesc', placeholder='description')
+            button.btn-primary(ng-click='addAddress()') add/update
 
     div(ng-show='settings.show')
         table(ng-show='save.blockadr')
             tr(ng-repeat='address in save.blockadr')
                 td.action
-                    a(href='', title='remove this address from the list', ng-click='removeAddress(address.address)') [remove]
+                    a(href='', title='remove this address from the list', ng-click='editAddress(address.address)')
+                        i.icon-edit
+                    a(href='', title='remove this address from the list', ng-click='removeAddress(address.address)')
+                        i.icon-trash
+
                 td
-                    span
-                        a(target='_blank', title='view on blockchain.info', href='https://blockchain.info/address/{{address.address}}', ng-show='address.address')
-                            | {{address.address}}
+                    span.address
+                        {{save.addresses[address.address].Desc}} ({{address.address}})
 
 
 
     div(ng-hide='settings.show')
-        table(ng-show='save.blockadr')
+        table.fixed(ng-show='save.blockadr')
             tr
                 th(width="60%") Address
                 th.right(width="90px") BTC
                 th.right(width="90px") USD
             tr(ng-repeat='address in save.blockadr')
-                td
+                td.address
                     a(target='_blank', title='view on blockchain.info ({{address.address}})', href='https://blockchain.info/address/{{address.address}}', ng-show='address.address')
-                        | {{address.address}}
-                td.right {{(address.final_balance/100000000)| currency:""}}
+                        | {{save.addresses[address.address].Desc}} ({{address.address}})
+                td.right {{(address.final_balance/100000000)| numbere}}
                 td.right
-                    | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(address.final_balance/100000000)| currency:""}}
-            tr
+                    | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(address.final_balance/100000000)| numbere}}
+            tr.noborder
                 td.right.bold Total
-                td.right.bold {{(save.wallet.final_balance/100000000)| currency:""}}
+                td.right.bold {{(save.wallet.final_balance/100000000)| numbere}}
                 td.right.bold
-                    | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(save.wallet.final_balance/100000000)| currency:""}}
+                    | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(save.wallet.final_balance/100000000)| numbere}}

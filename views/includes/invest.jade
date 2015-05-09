@@ -1,47 +1,59 @@
-section
+section(ng-show='invest.Securities || settings.show')
     h2 Invest
+    span.spinner(ng-show='invest.loading > 0')
+        i.icon-refresh.icon-spin
+    span.spinner(ng-show='invest.error', title='Error fetching data – {{invest.errorStatus}}')
+        i.icon-warning-sign
     span.help(ng-show='settings.show',ng-mouseover='settings.helptopic.invest=true',ng-mouseout='settings.helptopic.invest=false') ?
     .settings(ng-show='settings.show')
-        form(ng-submit='addBtcTcApiKey()')
-            input(type='text', ng-model='invest.BtcTcApiKey', placeholder='Add btct.co API key')
-            input.btn-primary(type='submit', value='save')
+        form()
+            select(ng-model="invest.Ticker", name="{string}", required, ng-options="c for (c,v) in invest.Tickers")
+            input(type='text', ng-model='invest.Quantity', placeholder='quantity')
+            button.btn-primary(ng-click='addSecurity()') add/update
     div
-        table(ng-show='invest.BtcTcApiKey')
-            tr
-                th(width="20%") Ticker
-                th.right(title='latest bid',width="50px") Bid
-                th.right(title='quantity hold',width="50px") Qty
-                th.right(title='total btc',width="70px") BTC
-                th.right(title='total usd',width="90px") USD
-                th.right.hidesm(title='total usd',width="50px") 24h
-                th.right.hidesm(title='total usd',width="50px") 7d
-                th.right.hidesm(title='total usd',width="50px") 30d
-            tr(ng-repeat='security in invest.btctc.securities', ng-show='security.market.bid')
-                td
-                    a(target='_blank', title='view on btct.co', href='https://btct.co/security/{{security.market.ticker}}', ng-show='security.market.ticker') {{security.market.ticker}}
-                td.right {{security.market.bid| currency:""}}
-                td.right {{security.quantity}}
-                td.right {{security.total_value| currency:""}}
-                td.right
-                    | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(security.total_value)| currency:""}}
+        table#rt1.rt.cf(ng-show='invest.Securities')
+            thead.cf
+                tr
+                    th(ng-show='settings.show')
+                    th Ticker
+                    th.right(title='latest bid') Bid
+                    th.right(title='quantity hold') Qty
+                    th.right(title='total btc') BTC
+                    th.right(title='total usd') USD
+                    th.right(title='change to 24h average') 24h
+                    th.right(title='change to 7d average') 7d
+                    th.right(title='change to 30d average') 30d
 
-                td.right.hidesm(ng-class="{negative: getTickerChange(security, '24h_avg') < 0, positive: getTickerChange(security, '24h_avg') > 0}")
-                    {{getTickerChange(security, '24h_avg') | number:1}}%
-                td.right.hidesm(ng-class="{negative: getTickerChange(security, '7d_avg') < 0, positive: getTickerChange(security, '7d_avg') > 0}")
-                    {{getTickerChange(security, '7d_avg') | number:1}}%
-                td.right.hidesm(ng-class="{negative: getTickerChange(security, '30d_avg') < 0, positive: getTickerChange(security, '30d_avg') > 0}")
-                    {{getTickerChange(security, '30d_avg') | number:1}}%
+            tbody.transform
+                tr.data(ng-repeat='security in invest.Securities')
+                    td.action(ng-show='settings.show')
+                        a(href='', title='remove this address from the list', ng-click='editTicker(security)')
+                            i.icon-edit
+                        a(href='', title='remove this address from the list', ng-click='removeTicker(security)')
+                            i.icon-trash
+                    td.ticker
+                        a(target='_blank', title='view on havelock', href='https://www.havelockinvestments.com/fund.php?symbol={{security.Ticker}}', ng-show='security.Ticker') {{security.Ticker}}
+
+                    td.right {{invest.Tickers[security.Ticker].last| numbere}}
+                    td.right {{security.Quantity}}
+                    td.right {{invest.Tickers[security.Ticker].last * security.Quantity| numbere}}
+                    td.right
+                        | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(invest.Tickers[security.Ticker].last*security.Quantity)| numbere}}
+                    td.right(ng-class="{negative: getTickerChange(invest.Tickers[security.Ticker], '1d') < 0, positive: getTickerChange(invest.Tickers[security.Ticker], '1d') > 0}")
+                        span(title!="Min: {{invest.Tickers[security.Ticker]['1d'].min | numbere }}&#xD;Avg: {{invest.Tickers[security.Ticker]['1d'].vwap | numbere }}&#xD;Max: {{invest.Tickers[security.Ticker]['1d'].max | numbere }}&#xD;Vol: {{invest.Tickers[security.Ticker]['1d'].vol | numbere }}&#xD;BTC: {{invest.Tickers[security.Ticker]['1d'].btc | numbere }}")
+                            {{getTickerChange(invest.Tickers[security.Ticker], '1d') | number:1}}%
+                    td.right(ng-class="{negative: getTickerChange(invest.Tickers[security.Ticker], '7d') < 0, positive: getTickerChange(invest.Tickers[security.Ticker], '7d') > 0}")
+                        span(title!="Min: {{invest.Tickers[security.Ticker]['7d'].min | numbere }}&#xD;Avg: {{invest.Tickers[security.Ticker]['7d'].vwap | numbere }}&#xD;Max: {{invest.Tickers[security.Ticker]['7d'].max | numbere }}&#xD;Vol: {{invest.Tickers[security.Ticker]['7d'].vol | numbere }} ({{invest.Tickers[security.Ticker]['7d'].vol/7 | numbere }})&#xD;BTC: {{invest.Tickers[security.Ticker]['7d'].btc | numbere }} ({{invest.Tickers[security.Ticker]['7d'].btc/7 | numbere }})")
+                            {{getTickerChange(invest.Tickers[security.Ticker], '7d') | number:1}}%
+                    td.right(ng-class="{negative: getTickerChange(invest.Tickers[security.Ticker], '30d') < 0, positive: getTickerChange(invest.Tickers[security.Ticker], '30d') > 0}")
+                        span(title!="Min: {{invest.Tickers[security.Ticker]['30d'].min | numbere }}&#xD;Avg: {{invest.Tickers[security.Ticker]['30d'].vwap | numbere }}&#xD;Max: {{invest.Tickers[security.Ticker]['30d'].max | numbere }}&#xD;Vol: {{invest.Tickers[security.Ticker]['30d'].vol | numbere }} ({{invest.Tickers[security.Ticker]['30d'].vol/30 | numbere }})&#xD;BTC: {{invest.Tickers[security.Ticker]['30d'].btc | numbere }} ({{invest.Tickers[security.Ticker]['30d'].btc/30 | numbere }})")
+                            {{getTickerChange(invest.Tickers[security.Ticker], '30d') | number:1}}%
 
 
-            tr
-                td.right(colspan='3') Balance
-                td.right {{invest.btctc.balance.BTC| currency:""}}
-                td.right
-                    | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(invest.btctc.balance.BTC)| currency:""}}
-                td.hidesm(colspan='3')
-            tr
-                td.right.bold(colspan='3') Total
-                td.right.bold {{invest.totalbtc| currency: ""}}
-                td.right.bold
-                    | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(invest.totalbtc)| currency: ""}}
-                td.hidesm(colspan='3')
+            tbody.sum
+                tr.noborder
+                    td.right.bold(colspan='3') Total
+                    td.right.bold {{ getSum(invest.Securities) | numbere}}
+                    td.right.bold
+                        | {{market.bitcoindata.info.symbol_local.symbol}}{{getUsd(getSum(invest.Securities))| numbere}}
+                    td(colspan='3')

@@ -2,32 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73bd5805-3332-4c68-adf1-ea4007c5032d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="$PROJECT_DIR$/public/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/includes/invest.jade" afterPath="$PROJECT_DIR$/views/includes/invest.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.jade" afterPath="$PROJECT_DIR$/views/layout.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/main.js" afterPath="$PROJECT_DIR$/public/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/includes/save.jade" afterPath="$PROJECT_DIR$/views/includes/save.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/includes/spend.jade" afterPath="$PROJECT_DIR$/views/includes/spend.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="btc-folio.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/a.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368040195256" ignored="false" />
+    <ignored path="public/js/main.min.js" />
+    <file path="/a.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368729364829" ignored="false" />
     <file path="/a.coffee" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368040199806" ignored="false" />
-    <file path="/app.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368118920420" ignored="false" />
-    <file path="/main.css" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368106041510" ignored="false" />
-    <file path="/layout.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368119339452" ignored="false" />
+    <file path="/app.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384620078124" ignored="false" />
+    <file path="/main.css" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384619850793" ignored="false" />
+    <file path="/layout.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384621005013" ignored="false" />
     <file path="/index.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368042023390" ignored="false" />
-    <file path="/startserver.command" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1431167205222" ignored="false" />
+    <file path="/startserver.command" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368042359931" ignored="false" />
     <file path="/logo.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368042780487" ignored="false" />
     <file path="/Procfile" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368047667814" ignored="false" />
-    <file path="/Dummy.txt" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1431178650958" ignored="false" />
-    <file path="/readme.md" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368055884955" ignored="false" />
-    <file path="/save.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368105172711" ignored="false" />
-    <file path="/invest.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368105983320" ignored="false" />
-    <file path="/market.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368106754483" ignored="false" />
-    <file path="/spend.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368101591448" ignored="false" />
-    <file path="/package.json" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1431177817825" ignored="false" />
-    <file path="/index.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368115360776" ignored="false" />
-    <file path="/bitcoincharts.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368116616576" ignored="false" />
-    <file path="/blockchain.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1431176276703" ignored="false" />
+    <file path="/Dummy.txt" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384620143841" ignored="false" />
+    <file path="/readme.md" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368353208979" ignored="false" />
+    <file path="/save.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384617955938" ignored="false" />
+    <file path="/invest.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384619794757" ignored="false" />
+    <file path="/market.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384570674001" ignored="false" />
+    <file path="/spend.jade" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384616680903" ignored="false" />
+    <file path="/package.json" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368363842108" ignored="false" />
+    <file path="/index.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384559711650" ignored="false" />
+    <file path="/bitcoincharts.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384573301435" ignored="false" />
+    <file path="/blockchain.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384571991332" ignored="false" />
     <file path="/btc_tc_service.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368118718903" ignored="false" />
-    <file path="/main.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368119185827" ignored="false" />
-    <file path="/a.dummy" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1431175893988" ignored="false" />
+    <file path="/main.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384620718890" ignored="false" />
+    <file path="/gruntfile.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368731738338" ignored="false" />
+    <file path="/app-0.0.7.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368365834979" ignored="false" />
+    <file path="/spingenerator.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368725374615" ignored="false" />
+    <file path="/numberformat.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368733695443" ignored="false" />
+    <file path="/a.dummy" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1368740306090" ignored="false" />
+    <file path="/numbere.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384566576242" ignored="false" />
+    <file path="/havelock_service.js" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384572053070" ignored="false" />
+    <file path="/.gitignore" changelist="73bd5805-3332-4c68-adf1-ea4007c5032d" time="1384573179874" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,60 +61,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="53" selection-end="72" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="32" selection-start="206" selection-end="206" vertical-scroll-proportion="0.22222222">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/index.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/layout.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="20" selection-start="4364" selection-end="4364" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1431177689000" expanded="true" signature="1114:5290" placeholder="..." />
-                <marker date="1431177689000" expanded="true" signature="2486:2622" placeholder="..." />
-                <marker date="1431177689000" expanded="true" signature="4340:5290" placeholder="..." />
-                <marker date="1431177689000" expanded="true" signature="4340:4342" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="137" column="78" selection-start="4048" selection-end="4048" vertical-scroll-proportion="0.0">
+            <state line="68" column="0" selection-start="1424" selection-end="1424" vertical-scroll-proportion="-5.769231">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blockchain.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/blockchain.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="52" selection-start="634" selection-end="642" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="710" column="21" selection-start="12246" selection-end="12246" vertical-scroll-proportion="-25.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.jade" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/layout.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="82" column="45" selection-start="4143" selection-end="4143" vertical-scroll-proportion="0.24910608">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="invest.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/includes/invest.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="55" selection-start="7" selection-end="53" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="save.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/includes/save.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="51" selection-start="7" selection-end="49" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spend.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/includes/spend.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="51" selection-start="7" selection-end="47" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="market.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/includes/market.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="29" selection-start="252" selection-end="254" vertical-scroll-proportion="-3.4615386">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="havelock_service.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/havelock_service.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="61" selection-start="530" selection-end="578" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="32" selection-start="614" selection-end="614" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -124,28 +169,28 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/views/includes/spend.jade" />
-        <option value="$PROJECT_DIR$/views/includes/save.jade" />
-        <option value="$PROJECT_DIR$/views/includes/invest.jade" />
-        <option value="$PROJECT_DIR$/public/css/main.css" />
-        <option value="$PROJECT_DIR$/views/includes/market.jade" />
+        <option value="$PROJECT_DIR$/public/css/font-awesome.css" />
         <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/routes/bitcoincharts.js" />
-        <option value="$PROJECT_DIR$/routes/btc_tc_service.js" />
-        <option value="$PROJECT_DIR$/readme.md" />
-        <option value="$PROJECT_DIR$/startserver.command" />
+        <option value="$PROJECT_DIR$/public/js/filters/numbere.js" />
+        <option value="$PROJECT_DIR$/routes/havelock_service.js" />
         <option value="$PROJECT_DIR$/routes/blockchain.js" />
-        <option value="$PROJECT_DIR$/views/layout.jade" />
+        <option value="$PROJECT_DIR$/startserver.command" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/routes/bitcoincharts.js" />
+        <option value="$PROJECT_DIR$/views/includes/market.jade" />
+        <option value="$PROJECT_DIR$/public/css/main.css" />
+        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/public/js/main.js" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/views/includes/save.jade" />
+        <option value="$PROJECT_DIR$/views/includes/spend.jade" />
+        <option value="$PROJECT_DIR$/views/includes/invest.jade" />
+        <option value="$PROJECT_DIR$/views/layout.jade" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="37" />
-    <option name="y" value="41" />
+    <option name="x" value="51" />
+    <option name="y" value="75" />
     <option name="width" value="1768" />
     <option name="height" value="998" />
   </component>
@@ -209,6 +254,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -237,41 +283,168 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="btc-folio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="btc-folio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="btc-folio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="btc-folio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="btc-folio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="btc-folio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="btc-folio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="btc-folio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="btc-folio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="btc-folio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="filters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="btc-folio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="btc-folio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="222" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="224" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="preferences.externalTools" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="224" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="options.searchVisible" value="true" />
+    <property name="options.lastSelected" value="web.server" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="234" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1023" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1022" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="229" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="226" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FullScreen" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig">
     <servers>
-      <server id="5dfbeef6-90ae-42ab-92d8-7b65cadb91a2">
-        <serverdata />
-      </server>
-      <server id="f3c5872a-13fe-4389-baa3-01d829f18b4e">
-        <serverdata />
+      <server id="0c1efff6-d71c-461a-b63a-160be11236cb">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping local="$PROJECT_DIR$/public" web="/" />
+          </mappings>
+        </serverdata>
       </server>
     </servers>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/views/includes" />
-      <recent name="$PROJECT_DIR$/views" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/routes" />
+      <recent name="$PROJECT_DIR$/public/js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/css" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/public/img" />
+      <recent name="$PROJECT_DIR$/public/js" />
+      <recent name="$PROJECT_DIR$/views/includes" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.app.js">
@@ -330,39 +503,103 @@
       <created>1368111918791</created>
       <updated>1368111918792</updated>
     </task>
-    <task id="LOCAL-00005" summary="moved to the node plugin for blockchain.info">
-      <created>1431178003861</created>
-      <updated>1431178003861</updated>
+    <task id="LOCAL-00005" summary="api call cache,  optimization">
+      <created>1368119799997</created>
+      <updated>1368119799997</updated>
     </task>
-    <task id="LOCAL-00006" summary="moved to the node plugin for blockchain.info">
-      <created>1431178339959</created>
-      <updated>1431178339959</updated>
+    <task id="LOCAL-00006" summary="Layout improvements">
+      <created>1368361807489</created>
+      <updated>1368361807489</updated>
     </task>
-    <task id="LOCAL-00007" summary="moved to the node plugin for blockchain.info">
-      <created>1431178735951</created>
-      <updated>1431178735951</updated>
+    <task id="LOCAL-00007" summary="Basic Grunt Build">
+      <created>1368366344056</created>
+      <updated>1368366344056</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Basic Grunt Build">
+      <created>1368366519793</created>
+      <updated>1368366519793</updated>
+    </task>
+    <task id="LOCAL-00009" summary="changed order of blocks">
+      <created>1368384663079</created>
+      <updated>1368384663079</updated>
+    </task>
+    <task id="LOCAL-00010" summary="removed javascript bug">
+      <created>1368388628689</created>
+      <updated>1368388628689</updated>
+    </task>
+    <task id="LOCAL-00011" summary="corrected wrong link to css">
+      <created>1368388747650</created>
+      <updated>1368388747650</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Release build mechanism and version dependent caching of javascript/css improved &#10;hide angular element until angular is loaded&#10;spinners for every loading operation&#10;improved general help and search engine description">
+      <created>1368729528592</created>
+      <updated>1368729528592</updated>
+    </task>
+    <task id="LOCAL-00013" summary="btc-folio faveicon">
+      <created>1368731485002</created>
+      <updated>1368731485002</updated>
+    </task>
+    <task id="LOCAL-00014" summary="number formatting with postfixes (micro, mili, kilo, Mega, ...)">
+      <created>1368734205365</created>
+      <updated>1368734205365</updated>
+    </task>
+    <task id="LOCAL-00015" summary="number formatting with postfixes (micro, mili, kilo, Mega, ...)">
+      <created>1368734242091</created>
+      <updated>1368734242092</updated>
+    </task>
+    <task id="LOCAL-00016" summary="- fixed crash on ios with animated svg -&gt; icon font&#10;- added launch screen for ios">
+      <created>1368739940171</created>
+      <updated>1368739940171</updated>
+    </task>
+    <task id="LOCAL-00017" summary="- fixed crash on ios with animated icon font">
+      <created>1368740354919</created>
+      <updated>1368740354919</updated>
+    </task>
+    <task id="LOCAL-00018" summary="- fixed loop forever in format number function">
+      <created>1368740796825</created>
+      <updated>1368740796825</updated>
+    </task>
+    <task id="LOCAL-00019" summary="- fixed loop forever in format number function">
+      <created>1368740813758</created>
+      <updated>1368740813758</updated>
+    </task>
+    <task id="LOCAL-00020" summary="- Added Havelock investment support for stock quotes&#10;- Added support for bitcoinaddress descriptions&#10;- Better error handling&#10;- Removed support for btct.co">
+      <created>1384572633990</created>
+      <updated>1384572633990</updated>
+    </task>
+    <task id="LOCAL-00021" summary="- Bugfix for first run&#10;- Fixed import">
+      <created>1384574187499</created>
+      <updated>1384574187499</updated>
+    </task>
+    <task id="LOCAL-00022" summary="- Version Bumb, Release">
+      <created>1384574875085</created>
+      <updated>1384574875085</updated>
+    </task>
+    <task id="LOCAL-00023" summary="- bugfixes&#10;- edit/remove securietes&#10;- edit addresses">
+      <created>1384620156642</created>
+      <updated>1384620156643</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="37" y="41" width="1768" height="998" extended-state="0" />
-    <editor active="false" />
+    <frame x="51" y="75" width="1768" height="998" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298351" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34318182" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26876792" sideWeight="0.6708428" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26876792" sideWeight="0.7647727" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3988006" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298351" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298351" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.9948424" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.9948424" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23522727" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -394,7 +631,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
+    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
     <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
     <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
@@ -410,7 +647,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved to the node plugin for blockchain.info" />
+    <option name="LAST_COMMIT_MESSAGE" value="- bugfixes&#10;- edit/remove securietes&#10;- edit addresses" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -429,12 +666,25 @@
     <MESSAGE value="bug squatting" />
     <MESSAGE value="design improovments" />
     <MESSAGE value="design improvements" />
-    <MESSAGE value="moved to the node plugin for blockchain.info" />
+    <MESSAGE value="api call cache,  optimization" />
+    <MESSAGE value="Layout improvements" />
+    <MESSAGE value="Basic Grunt Build" />
+    <MESSAGE value="changed order of blocks" />
+    <MESSAGE value="removed javascript bug" />
+    <MESSAGE value="corrected wrong link to css" />
+    <MESSAGE value="Release build mechanism and version dependent caching of javascript/css improved &#10;hide angular element until angular is loaded&#10;spinners for every loading operation&#10;improved general help and search engine description" />
+    <MESSAGE value="btc-folio faveicon" />
+    <MESSAGE value="number formatting with postfixes (micro, mili, kilo, Mega, ...)" />
+    <MESSAGE value="- fixed crash on ios with animated svg -&gt; icon font&#10;- added launch screen for ios" />
+    <MESSAGE value="- fixed crash on ios with animated icon font" />
+    <MESSAGE value="- fixed loop forever in format number function" />
+    <MESSAGE value="- Added Havelock investment support for stock quotes&#10;- Added support for bitcoinaddress descriptions&#10;- Better error handling&#10;- Removed support for btct.co" />
+    <MESSAGE value="- Bugfix for first run&#10;- Fixed import" />
+    <MESSAGE value="- Version Bumb, Release" />
+    <MESSAGE value="- bugfixes&#10;- edit/remove securietes&#10;- edit addresses" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="1" />
-    </breakpoint-manager>
+    <breakpoint-manager />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <PATH>
@@ -449,103 +699,108 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/readme.md">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="136" selection-end="136" vertical-scroll-proportion="0.123239435" />
+        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/bitcoincharts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="49" selection-start="511" selection-end="511" vertical-scroll-proportion="0.4483986" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="37" selection-start="85" selection-end="85" vertical-scroll-proportion="0.12811388" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/blockchain.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="1351" selection-end="1351" vertical-scroll-proportion="0.8967972" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/btc_tc_service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="85" selection-start="979" selection-end="979" vertical-scroll-proportion="0.48754448" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/blockchain.info/docs/BlockExplorer.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="17" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.33274022">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/blockchain.info/lib/blockexplorer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="5" selection-start="1732" selection-end="1732" vertical-scroll-proportion="0.37544483">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="398" column="36" selection-start="6629" selection-end="6633" vertical-scroll-proportion="0.72131145" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/startserver.command">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="9" selection-start="21" selection-end="21" vertical-scroll-proportion="0.021352313" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="20" selection-start="4364" selection-end="4364" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1431177689000" expanded="true" signature="1114:5290" placeholder="..." />
-            <marker date="1431177689000" expanded="true" signature="2486:2622" placeholder="..." />
-            <marker date="1431177689000" expanded="true" signature="4340:5290" placeholder="..." />
-            <marker date="1431177689000" expanded="true" signature="4340:4342" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
+    <entry file="file://$PROJECT_DIR$/.slugignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/startserver.command">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="53" selection-end="72" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="1" column="18" selection-start="30" selection-end="30" vertical-scroll-proportion="0.017605634" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/main.js">
+    <entry file="file://$PROJECT_DIR$/routes/bitcoincharts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="78" selection-start="4048" selection-end="4048" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0">
+        <state line="26" column="2" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="32" selection-start="206" selection-end="206" vertical-scroll-proportion="0.22222222">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/includes/market.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="29" selection-start="252" selection-end="254" vertical-scroll-proportion="-3.4615386">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="1729" selection-start="1729" selection-end="1729" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/havelock_service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="61" selection-start="530" selection-end="578" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="710" column="21" selection-start="12246" selection-end="12246" vertical-scroll-proportion="-25.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="32" selection-start="614" selection-end="614" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/blockchain.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="52" selection-start="634" selection-end="642" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="0" selection-start="1424" selection-end="1424" vertical-scroll-proportion="-5.769231">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/includes/save.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="51" selection-start="7" selection-end="49" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/includes/spend.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="51" selection-start="7" selection-end="47" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/includes/invest.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="55" selection-start="7" selection-end="53" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="45" selection-start="4143" selection-end="4143" vertical-scroll-proportion="0.24910608">
           <folding />
         </state>
       </provider>
@@ -567,4 +822,3 @@
     </states>
   </component>
 </project>
-

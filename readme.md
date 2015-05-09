@@ -11,11 +11,7 @@ A simple web app to watch you btc portfolio in total btc and usd.
   <dd>watch an arbitrary amount of btc's (eg. the ones you have in your btc client.)</dd>
 
   <dt>Save</dt>
-  <dd>watch Bitcoin addresses
-      * if you receive donations
-      * if you have paperwallets
-      * ...</dd>
-
+  <dd>watch Bitcoin addresses (donations, paperwallets, mining, ...)</dd>
   <dt>Invest</dt>
   <dd>watch your portfolio and balance from btct.co with you api key</dd>
 </dl>

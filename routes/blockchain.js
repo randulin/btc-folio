@@ -8,7 +8,6 @@ exports.query_address = function(request, response) {
 	var data = "";
 
 	var addresses = request.query.a.split("|");
-  console.log(JSON.stringify(addresses));
   var cachekey = 'KEY:' + addresses.join("|");
 
   if (global.cache
@@ -28,16 +27,23 @@ exports.query_address = function(request, response) {
   blockexplorer.getMultiAddress(addresses, function(error, d) {
     if (error){
       console.error(error);
+      response.send(500, "Error");
       return;
     }
-    global.cache.blockchain = global.cache.blockchain || {};
-    global.cache.blockchain[cachekey] = {};
-    console.log('data: "' + JSON.stringify(d) + '"');
-    global.cache.blockchain[cachekey].data = d;
-    global.cache.blockchain[cachekey].expires = Date.now() + global.cache.expire;
-    console.log('added blockchain (' + cachekey + ') data to cache expires: ' + new Date(global.cache.blockchain[cachekey].expires));
+    
+    try {
+		global.cache.blockchain = global.cache.blockchain || {};
+		global.cache.blockchain[cachekey] = {};
+		global.cache.blockchain[cachekey].data = d;
+		global.cache.blockchain[cachekey].expires = Date.now() + global.cache.expire;
+		console.log('added blockchain (' + cachekey + ') data to cache expires: ' + new Date(global.cache.blockchain[cachekey].expires));
 
-    response.send(global.cache.blockchain[cachekey].data);
+		response.send(global.cache.blockchain[cachekey].data);
+	} catch(e) {
+        console.error(e);
+        response.send(500, "Error");
+	}
   });
 	
+
 };

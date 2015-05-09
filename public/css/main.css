@@ -155,7 +155,7 @@ h2 {
 
 
 	background-color: #0097A3;
-	color: #FFFFFF;
+	color: #FFFCEF;
 }
 
 
@@ -175,6 +175,7 @@ section > div {
 
 .header-container {
 	background: #C45000;
+	clear: both; 
 }
 
 header {	
@@ -224,7 +225,7 @@ header svg {
 }
 
 .negative {
-	color: #7F0000;	
+	color: #AF0000;
 }
 
 .help {
@@ -239,9 +240,156 @@ header svg {
 
 
 
-table { width:100%;table-layout:fixed; }
-table tr { height:1em;  }
-td { overflow:hidden;white-space:nowrap;  }
+.spinner {
+    float: right;
+    margin-top: -37px;
+    margin-right: 10px;
+    padding: 5px;
+    width: 30px;
+    text-align: right;
+    color: #FFFCEF;
+}
+
+
+
+table {
+    line-height: 1.4em;
+    width: 100%;
+}
+
+table.fixed {
+    table-layout: fixed;
+}
+
+td {
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+}
+
+td.ticker, td.address {
+    font-size: 0.8em;
+}
+
+th {
+    text-align: left;
+}
+
+td {
+    padding: 0;
+}
+
+td.right, th.right {
+    text-align: right;
+}
+
+td.bold {
+    font-weight: bold;
+}
+
+td.action {
+    font-size: 0.8em;
+}
+
+td.action i {
+    margin-right: 3px;
+}
+
+
+tr  {
+    border-bottom: 1px solid #CFCCBF;
+}
+
+tr.noborder  {
+     border-bottom: none;
+}
+
+
+
+
+
+
+a, a:visited, a:active {
+    text-decoration: none;
+    color: #743300;
+}
+
+a:hover {
+    color: #C45000;
+}
+
+
+
+.cf:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+* html .cf { zoom: 1; }
+*:first-child+html .cf { zoom: 1; }
+
+
+.rt { width: 100%; border-collapse: collapse; border-spacing: 0; }
+
+.rt th,
+.rt td { margin: 0; vertical-align: top;  }
+
+
+
+@media only screen and (max-width: 40em) { /*640*/
+
+    #rt1 { display: block; position: relative; width: 100%; }
+    #rt1 thead { display: block; float: left; }
+    #rt1 tbody.transform { display: block; width: auto; position: relative; overflow-x: auto; white-space: nowrap; }
+    #rt1 thead tr { display: block;  padding: 0 10px 0; }
+    #rt1 th { display: block; min-height: 24px;}
+    #rt1 tbody.transform tr { display: inline-block; vertical-align: top; padding: 0 10px 0; }
+    #rt1 tbody.transform td { display: block; min-height: 26px; }
+
+    /* sort out borders */
+
+    .rt tbody.transform tr { border-bottom: none; }
+    .rt thead tr { border-bottom: none; }
+
+    .rt tbody.transform tr { border-right: 1px solid #CFCCBF; }
+    .rt thead tr { border-right: 1px solid #CFCCBF; }
+
+/*    .rt td { border-left: 0; border-right: 0; border-bottom: 0; }
+
+    .rt th:last-child,
+    .rt td:last-child { border-bottom: 1px solid #babcbf; }*/
+
+    #rt1 thead { padding-bottom: 10px;}
+    #rt1 tbody.transform { padding-bottom: 10px;}
+
+    .rt tbody.sum tr { border-top: 1px solid #CFCCBF;  }
+    .rt tbody.sum td { padding: 2px 7px; }
+}
+
+
+
+/* startup */
+
+.ng-cloak {
+      display: none;
+}
+
+
+.loading {
+    display: none;
+}
+
+.loading.ng-cloak {
+    display: block;
+    text-align: center;
+    padding: 100px;
+    color: #743300;
+}
+
+
+
+
+
+
+
+
+
 
 
 /* ====================
@@ -253,6 +401,7 @@ td { overflow:hidden;white-space:nowrap;  }
 	background: #FFFCEF;
 	float: left;
 	width: 100%;
+    min-height: 30px;
 }
 
 nav {
@@ -270,6 +419,10 @@ nav a {
     font-weight: bold;
     font-size: 0.7em;
     color: #2A353C;
+}
+
+nav i {
+    color: #743300;
 }
 
 nav a:hover,
@@ -306,35 +459,6 @@ nav li:last-child a {
 
 
 
-th {
-	padding: 3px 10px 3px 0;
-	text-align: left;
-}
-
-td {
-	padding: 3px 10px 3px 0;
-}
-
-tr {
-	border-bottom: 1px solid lightgrey;
-	
-}
-
-tr:last-child {
-	border-bottom: none;
-}
-
-td.right, th.right {
-	text-align: right;
-}
-
-td.bold {
-	font-weight: bold;
-}
-
-td.action {
-	font-size: 10px;
-}
 
 
 
@@ -344,9 +468,6 @@ div.settings {
 }
 
 
-section table {
-    width: 100%;
-}
 
 
 
@@ -363,9 +484,9 @@ section table {
 
 
 
-.hidesm {
+/*.hidesm {
     display: none;
-}
+}*/
 
 
 
@@ -585,3 +706,9 @@ section table {
         page-break-after: avoid;
     }
 }
+
+
+button, input, select {
+    margin-right: 3px;
+}
+
