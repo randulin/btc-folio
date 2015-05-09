@@ -1,12 +1,14 @@
 
-var http = require('http');
+
+var blockchain = require('blockchain.info')
+  , blockexplorer = blockchain.blockexplorer;
 
 exports.query_address = function(request, response) {
 
 	var data = "";
 
-	var addresses = request.query.a;
-  var cachekey = 'KEY:' + addresses;
+	var addresses = request.query.a.split("|");
+  var cachekey = 'KEY:' + addresses.join("|");
 
   if (global.cache
       && global.cache.blockchain
@@ -20,37 +22,28 @@ exports.query_address = function(request, response) {
     return;
   }
 
-	console.log('http://blockchain.info/multiaddr?active=' + addresses);
-	
-	http.get('http://blockchain.info/multiaddr?active=' + addresses, function(res) {
-	
-	  res.on('data', function(d) {
-		 data += d; 
-	  });	  
-		  
-	  res.on('end', function() {
+	console.log('http://blockchain.info/multiaddr?active=' + JSON.stringify(addresses));
 
-      if (!data) {
-        response.send(500, "no data");
-        return;
-      }
+  blockexplorer.getMultiAddress(addresses, function(error, d) {
+    if (error){
+      console.error(error);
+      response.send(500, "Error");
+      return;
+    }
+    
+    try {
+		global.cache.blockchain = global.cache.blockchain || {};
+		global.cache.blockchain[cachekey] = {};
+		global.cache.blockchain[cachekey].data = d;
+		global.cache.blockchain[cachekey].expires = Date.now() + global.cache.expire;
+		console.log('added blockchain (' + cachekey + ') data to cache expires: ' + new Date(global.cache.blockchain[cachekey].expires));
 
-      try {
-        global.cache.blockchain = global.cache.blockchain || {};
-        global.cache.blockchain[cachekey] = {};
-        global.cache.blockchain[cachekey].data = JSON.stringify(JSON.parse(data));
-        global.cache.blockchain[cachekey].expires = Date.now() + global.cache.expire;
-        console.log('added blockchain (' + cachekey + ') data to cache expires: ' + new Date(global.cache.blockchain[cachekey].expires));
-        response.send(global.cache.blockchain[cachekey].data);
-      } catch(e) {
+		response.send(global.cache.blockchain[cachekey].data);
+	} catch(e) {
         console.error(e);
         response.send(500, "Error");
-      }
-
-	  });
-	
-  }).on('error', function(e) {
-    console.error(e);
-    response.send(500, "Error");
+	}
   });
+	
+
 };

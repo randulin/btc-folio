@@ -6,8 +6,9 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "3.2.3",
-    "jade": "*"
+    "express": "3.2.3"
+    , "jade": "*"
+    , "blockchain.info" : "1.3.1"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

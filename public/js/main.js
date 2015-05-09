@@ -18,7 +18,6 @@ var BTC = function ($scope, $http, $timeout) {
 
 	$scope.invest = {};
   $scope.invest.loading = 0;
-	
 	$scope.settings = {
 		show: true
 		, text: "hide settings"
@@ -40,6 +39,7 @@ var BTC = function ($scope, $http, $timeout) {
 			console.warn(e);
 		}
 	}
+
 	
   if (securities_raw = localStorage.getItem('btc-portfolio.invest.securities')) {
     try {
@@ -50,6 +50,7 @@ var BTC = function ($scope, $http, $timeout) {
   }
 	
 	if ($scope.spend.value || $scope.invest.Securities || $scope.save.addresses) {
+
 		$scope.settings = {
 			show: false
 			, text: "show settings"
@@ -107,6 +108,7 @@ var BTC = function ($scope, $http, $timeout) {
 	updateWeighted($scope);
 	
 
+
 	//havelock api
 	var getSecurities = function($scope) {
     $scope.invest.error = false;
@@ -123,6 +125,7 @@ var BTC = function ($scope, $http, $timeout) {
           $scope.invest.errorStatus = status + ' – ' + data;
         });
 	};
+
   getSecurities($scope);
 
 
@@ -167,6 +170,7 @@ var BTC = function ($scope, $http, $timeout) {
     $scope.save.BitCoinAddress = $scope.save.addresses[adr].Address;
     $scope.save.BitCoinAddressDesc = $scope.save.addresses[adr].Desc;
 	};
+
 
 	$scope.addSecurity = function() {
     $scope.invest.Securities = $scope.invest.Securities || {};
@@ -223,6 +227,7 @@ var BTC = function ($scope, $http, $timeout) {
 
 	$scope.refreshInternal = function(doNotWriteLocalStorage) {
 		updateBlockchain($scope);
+
     getSecurities($scope);
 		updateWeighted($scope);
 
@@ -251,11 +256,12 @@ var BTC = function ($scope, $http, $timeout) {
 		return (($scope.market.bitcoindata.info.symbol_local.conversion_back - $scope.market.ticker.USD[key])/$scope.market.ticker.USD[key] * 100);	
 	};
 
-	
+
 	$scope.getTickerChange = function(security, key) {
 		if (!security || !security.last) return null;
 		return  ((security.last - security[key].vwap)/security[key].vwap * 100);
 	};
+
 
 
   $scope.getSum = function(securities, key) {
@@ -288,10 +294,12 @@ var BTC = function ($scope, $http, $timeout) {
 			localStorage.setItem('btc-portfolio.save.addresses', JSON.stringify([$scope.save.addresses]));
 			updateBlockchain($scope);
 		}
+
 		
 		if (data.Securities) {
       $scope.invest.Securities = data.Securities;
 			localStorage.setItem('btc-portfolio.invest.securities', JSON.stringify([$scope.invest.Securities]));
+
 		}
 
     $scope.toggleSettings();
