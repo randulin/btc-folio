@@ -2,7 +2,7 @@
 
 A simple web app to watch you btc portfolio in total btc and usd.
 
-**This is an early, but working Prototype**
+Visit this project at: [btc-folio.info](https://btc-folio.info)
 
 ##Features
 
